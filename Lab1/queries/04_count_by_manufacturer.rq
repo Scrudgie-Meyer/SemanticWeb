@@ -1,0 +1,6 @@
+PREFIX cars: <http://example.org/cars/>
+PREFIX schema: <https://schema.org/>
+SELECT ?manufacturerName (COUNT(?car) AS ?carCount) WHERE {
+  ?car a cars:Car ; cars:manufacturedBy ?manufacturer .
+  ?manufacturer schema:name ?manufacturerName .
+} GROUP BY ?manufacturerName ORDER BY DESC(?carCount) ?manufacturerName

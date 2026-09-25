@@ -1,0 +1,12 @@
+PREFIX cars: <http://example.org/cars/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX schema: <https://schema.org/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT ?localName ?wikidataResource ?wikidataLabel WHERE {
+  ?country a cars:Country ; schema:name ?localName ; owl:sameAs ?wikidataResource .
+  SERVICE <https://query.wikidata.org/sparql> {
+    VALUES ?wikidataResource { <http://www.wikidata.org/entity/Q17> <http://www.wikidata.org/entity/Q183> }
+    ?wikidataResource rdfs:label ?wikidataLabel .
+    FILTER(LANG(?wikidataLabel) = "en")
+  }
+} ORDER BY ?localName

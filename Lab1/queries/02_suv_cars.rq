@@ -1,0 +1,5 @@
+PREFIX cars: <http://example.org/cars/>
+PREFIX schema: <https://schema.org/>
+SELECT ?name ?year WHERE {
+  ?car a cars:Car ; schema:name ?name ; schema:productionDate ?year ; cars:hasBodyType cars:SUV .
+} ORDER BY ?name

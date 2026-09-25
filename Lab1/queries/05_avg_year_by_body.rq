@@ -1,0 +1,8 @@
+PREFIX cars: <http://example.org/cars/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX schema: <https://schema.org/>
+SELECT ?bodyName (AVG(?yearNumber) AS ?averageYear) WHERE {
+  ?car a cars:Car ; schema:productionDate ?year ; cars:hasBodyType ?body .
+  ?body schema:name ?bodyName .
+  BIND(xsd:integer(STR(?year)) AS ?yearNumber)
+} GROUP BY ?bodyName ORDER BY ?bodyName

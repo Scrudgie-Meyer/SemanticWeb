@@ -1,0 +1,898 @@
+[
+  {
+    "@id": "http://example.org/cars/Sedan",
+    "@type": [
+      "http://example.org/cars/BodyType"
+    ],
+    "https://schema.org/name": [
+      {
+        "@value": "Седан"
+      }
+    ]
+  },
+  {
+    "@id": "http://example.org/cars/countryOfOrigin",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://example.org/cars/Manufacturer"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "uk",
+        "@value": "країна походження"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://example.org/cars/Country"
+      }
+    ]
+  },
+  {
+    "@id": "http://example.org/cars/RenaultClio",
+    "@type": [
+      "http://example.org/cars/Car"
+    ],
+    "http://example.org/cars/hasBodyType": [
+      {
+        "@id": "http://example.org/cars/Hatchback"
+      }
+    ],
+    "http://example.org/cars/hasEngineType": [
+      {
+        "@id": "http://example.org/cars/Petrol"
+      }
+    ],
+    "http://example.org/cars/manufacturedBy": [
+      {
+        "@id": "http://example.org/cars/Renault"
+      }
+    ],
+    "https://schema.org/name": [
+      {
+        "@value": "Renault Clio"
+      }
+    ],
+    "https://schema.org/productionDate": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#gYear",
+        "@value": "2012"
+      }
+    ]
+  },
+  {
+    "@id": "http://example.org/cars/Hatchback",
+    "@type": [
+      "http://example.org/cars/BodyType"
+    ],
+    "https://schema.org/name": [
+      {
+        "@value": "Хетчбек"
+      }
+    ]
+  },
+  {
+    "@id": "http://example.org/cars/Infiniti",
+    "@type": [
+      "http://example.org/cars/Manufacturer"
+    ],
+    "http://example.org/cars/countryOfOrigin": [
+      {
+        "@id": "http://example.org/cars/Japan"
+      }
+    ],
+    "http://xmlns.com/foaf/0.1/name": [
+      {
+        "@value": "Infiniti"
+      }
+    ],
+    "https://schema.org/name": [
+      {
+        "@value": "Infiniti"
+      }
+    ]
+  },
+  {
+    "@id": "http://example.org/cars/FordMustang",
+    "@type": [
+      "http://example.org/cars/Car"
+    ],
+    "http://example.org/cars/hasBodyType": [
+      {
+        "@id": "http://example.org/cars/Coupe"
+      }
+    ],
+    "http://example.org/cars/hasEngineType": [
+      {
+        "@id": "http://example.org/cars/Petrol"
+      }
+    ],
+    "http://example.org/cars/manufacturedBy": [
+      {
+        "@id": "http://example.org/cars/Ford"
+      }
+    ],
+    "https://schema.org/name": [
+      {
+        "@value": "Ford Mustang"
+      }
+    ],
+    "https://schema.org/productionDate": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#gYear",
+        "@value": "2014"
+      }
+    ]
+  },
+  {
+    "@id": "http://example.org/cars/hasBodyType",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://example.org/cars/Car"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "uk",
+        "@value": "має тип кузова"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://example.org/cars/BodyType"
+      }
+    ]
+  },
+  {
+    "@id": "http://example.org/cars/BMW3Series",
+    "@type": [
+      "http://example.org/cars/Car"
+    ],
+    "http://example.org/cars/hasBodyType": [
+      {
+        "@id": "http://example.org/cars/Sedan"
+      }
+    ],
+    "http://example.org/cars/hasEngineType": [
+      {
+        "@id": "http://example.org/cars/Diesel"
+      }
+    ],
+    "http://example.org/cars/manufacturedBy": [
+      {
+        "@id": "http://example.org/cars/BMW"
+      }
+    ],
+    "https://schema.org/name": [
+      {
+        "@value": "BMW 3 Series"
+      }
+    ],
+    "https://schema.org/productionDate": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#gYear",
+        "@value": "2013"
+      }
+    ]
+  },
+  {
+    "@id": "http://example.org/cars/Nissan",
+    "@type": [
+      "http://example.org/cars/Manufacturer"
+    ],
+    "http://example.org/cars/countryOfOrigin": [
+      {
+        "@id": "http://example.org/cars/Japan"
+      }
+    ],
+    "http://xmlns.com/foaf/0.1/name": [
+      {
+        "@value": "Nissan"
+      }
+    ],
+    "https://schema.org/name": [
+      {
+        "@value": "Nissan"
+      }
+    ]
+  },
+  {
+    "@id": "http://example.org/cars/Japan",
+    "@type": [
+      "http://example.org/cars/Country"
+    ],
+    "http://example.org/cars/locatedIn": [
+      {
+        "@id": "http://example.org/cars/Asia"
+      }
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://www.wikidata.org/wiki/Q17"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#sameAs": [
+      {
+        "@id": "http://www.wikidata.org/entity/Q17"
+      }
+    ],
+    "https://schema.org/name": [
+      {
+        "@value": "Японія"
+      }
+    ]
+  },
+  {
+    "@id": "http://example.org/cars/VolkswagenGolf",
+    "@type": [
+      "http://example.org/cars/Car"
+    ],
+    "http://example.org/cars/hasBodyType": [
+      {
+        "@id": "http://example.org/cars/Hatchback"
+      }
+    ],
+    "http://example.org/cars/hasEngineType": [
+      {
+        "@id": "http://example.org/cars/Diesel"
+      }
+    ],
+    "http://example.org/cars/manufacturedBy": [
+      {
+        "@id": "http://example.org/cars/Volkswagen"
+      }
+    ],
+    "https://schema.org/name": [
+      {
+        "@value": "Volkswagen Golf"
+      }
+    ],
+    "https://schema.org/productionDate": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#gYear",
+        "@value": "2013"
+      }
+    ]
+  },
+  {
+    "@id": "http://example.org/cars/SUV",
+    "@type": [
+      "http://example.org/cars/BodyType"
+    ],
+    "https://schema.org/name": [
+      {
+        "@value": "SUV"
+      }
+    ]
+  },
+  {
+    "@id": "http://example.org/cars/locatedIn",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://example.org/cars/Country"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "uk",
+        "@value": "розташована у"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://example.org/cars/Continent"
+      }
+    ]
+  },
+  {
+    "@id": "http://example.org/cars/TeslaModelS",
+    "@type": [
+      "http://example.org/cars/Car"
+    ],
+    "http://example.org/cars/hasBodyType": [
+      {
+        "@id": "http://example.org/cars/Liftback"
+      }
+    ],
+    "http://example.org/cars/hasEngineType": [
+      {
+        "@id": "http://example.org/cars/Electric"
+      }
+    ],
+    "http://example.org/cars/manufacturedBy": [
+      {
+        "@id": "http://example.org/cars/Tesla"
+      }
+    ],
+    "https://schema.org/name": [
+      {
+        "@value": "Tesla Model S"
+      }
+    ],
+    "https://schema.org/productionDate": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#gYear",
+        "@value": "2014"
+      }
+    ]
+  },
+  {
+    "@id": "http://example.org/cars/Coupe",
+    "@type": [
+      "http://example.org/cars/BodyType"
+    ],
+    "https://schema.org/name": [
+      {
+        "@value": "Купе"
+      }
+    ]
+  },
+  {
+    "@id": "http://example.org/cars/InfinitiQX70",
+    "@type": [
+      "http://example.org/cars/Car"
+    ],
+    "http://example.org/cars/hasBodyType": [
+      {
+        "@id": "http://example.org/cars/SUV"
+      }
+    ],
+    "http://example.org/cars/hasEngineType": [
+      {
+        "@id": "http://example.org/cars/Petrol"
+      }
+    ],
+    "http://example.org/cars/manufacturedBy": [
+      {
+        "@id": "http://example.org/cars/Infiniti"
+      }
+    ],
+    "https://schema.org/name": [
+      {
+        "@value": "Infiniti QX70"
+      }
+    ],
+    "https://schema.org/productionDate": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#gYear",
+        "@value": "2014"
+      }
+    ]
+  },
+  {
+    "@id": "http://example.org/cars/BodyType",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "uk",
+        "@value": "Тип кузова"
+      }
+    ]
+  },
+  {
+    "@id": "http://example.org/cars/Europe",
+    "@type": [
+      "http://example.org/cars/Continent"
+    ],
+    "https://schema.org/name": [
+      {
+        "@value": "Європа"
+      }
+    ]
+  },
+  {
+    "@id": "http://example.org/cars/Liftback",
+    "@type": [
+      "http://example.org/cars/BodyType"
+    ],
+    "https://schema.org/name": [
+      {
+        "@value": "Ліфтбек"
+      }
+    ]
+  },
+  {
+    "@id": "http://example.org/cars/Manufacturer",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "uk",
+        "@value": "Виробник"
+      }
+    ]
+  },
+  {
+    "@id": "http://example.org/cars/Petrol",
+    "@type": [
+      "http://example.org/cars/EngineType"
+    ],
+    "https://schema.org/name": [
+      {
+        "@value": "Бензиновий"
+      }
+    ]
+  },
+  {
+    "@id": "http://example.org/cars/Renault",
+    "@type": [
+      "http://example.org/cars/Manufacturer"
+    ],
+    "http://example.org/cars/countryOfOrigin": [
+      {
+        "@id": "http://example.org/cars/France"
+      }
+    ],
+    "http://xmlns.com/foaf/0.1/name": [
+      {
+        "@value": "Renault"
+      }
+    ],
+    "https://schema.org/name": [
+      {
+        "@value": "Renault"
+      }
+    ]
+  },
+  {
+    "@id": "http://example.org/cars/NorthAmerica",
+    "@type": [
+      "http://example.org/cars/Continent"
+    ],
+    "https://schema.org/name": [
+      {
+        "@value": "Північна Америка"
+      }
+    ]
+  },
+  {
+    "@id": "http://example.org/cars/HondaCivic",
+    "@type": [
+      "http://example.org/cars/Car"
+    ],
+    "http://example.org/cars/hasBodyType": [
+      {
+        "@id": "http://example.org/cars/Sedan"
+      }
+    ],
+    "http://example.org/cars/hasEngineType": [
+      {
+        "@id": "http://example.org/cars/Petrol"
+      }
+    ],
+    "http://example.org/cars/manufacturedBy": [
+      {
+        "@id": "http://example.org/cars/Honda"
+      }
+    ],
+    "https://schema.org/name": [
+      {
+        "@value": "Honda Civic"
+      }
+    ],
+    "https://schema.org/productionDate": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#gYear",
+        "@value": "2012"
+      }
+    ]
+  },
+  {
+    "@id": "http://example.org/cars/Diesel",
+    "@type": [
+      "http://example.org/cars/EngineType"
+    ],
+    "https://schema.org/name": [
+      {
+        "@value": "Дизельний"
+      }
+    ]
+  },
+  {
+    "@id": "http://example.org/cars/USA",
+    "@type": [
+      "http://example.org/cars/Country"
+    ],
+    "http://example.org/cars/locatedIn": [
+      {
+        "@id": "http://example.org/cars/NorthAmerica"
+      }
+    ],
+    "https://schema.org/name": [
+      {
+        "@value": "США"
+      }
+    ]
+  },
+  {
+    "@id": "http://example.org/cars/Electric",
+    "@type": [
+      "http://example.org/cars/EngineType"
+    ],
+    "https://schema.org/name": [
+      {
+        "@value": "Електричний"
+      }
+    ]
+  },
+  {
+    "@id": "http://example.org/cars/Country",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "uk",
+        "@value": "Країна"
+      }
+    ]
+  },
+  {
+    "@id": "http://example.org/cars/Germany",
+    "@type": [
+      "http://example.org/cars/Country"
+    ],
+    "http://example.org/cars/locatedIn": [
+      {
+        "@id": "http://example.org/cars/Europe"
+      }
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://www.wikidata.org/wiki/Q183"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#sameAs": [
+      {
+        "@id": "http://www.wikidata.org/entity/Q183"
+      }
+    ],
+    "https://schema.org/name": [
+      {
+        "@value": "Німеччина"
+      }
+    ]
+  },
+  {
+    "@id": "http://example.org/cars/Tesla",
+    "@type": [
+      "http://example.org/cars/Manufacturer"
+    ],
+    "http://example.org/cars/countryOfOrigin": [
+      {
+        "@id": "http://example.org/cars/USA"
+      }
+    ],
+    "http://xmlns.com/foaf/0.1/name": [
+      {
+        "@value": "Tesla"
+      }
+    ],
+    "https://schema.org/name": [
+      {
+        "@value": "Tesla"
+      }
+    ]
+  },
+  {
+    "@id": "http://example.org/cars/France",
+    "@type": [
+      "http://example.org/cars/Country"
+    ],
+    "http://example.org/cars/locatedIn": [
+      {
+        "@id": "http://example.org/cars/Europe"
+      }
+    ],
+    "https://schema.org/name": [
+      {
+        "@value": "Франція"
+      }
+    ]
+  },
+  {
+    "@id": "http://example.org/cars/NissanQashqai",
+    "@type": [
+      "http://example.org/cars/Car"
+    ],
+    "http://example.org/cars/hasBodyType": [
+      {
+        "@id": "http://example.org/cars/SUV"
+      }
+    ],
+    "http://example.org/cars/hasEngineType": [
+      {
+        "@id": "http://example.org/cars/Petrol"
+      }
+    ],
+    "http://example.org/cars/manufacturedBy": [
+      {
+        "@id": "http://example.org/cars/Nissan"
+      }
+    ],
+    "https://schema.org/name": [
+      {
+        "@value": "Nissan Qashqai"
+      }
+    ],
+    "https://schema.org/productionDate": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#gYear",
+        "@value": "2014"
+      }
+    ]
+  },
+  {
+    "@id": "http://example.org/cars/Toyota",
+    "@type": [
+      "http://example.org/cars/Manufacturer"
+    ],
+    "http://example.org/cars/countryOfOrigin": [
+      {
+        "@id": "http://example.org/cars/Japan"
+      }
+    ],
+    "http://xmlns.com/foaf/0.1/name": [
+      {
+        "@value": "Toyota"
+      }
+    ],
+    "https://schema.org/name": [
+      {
+        "@value": "Toyota"
+      }
+    ]
+  },
+  {
+    "@id": "http://example.org/cars/hasEngineType",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://example.org/cars/Car"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "uk",
+        "@value": "має тип двигуна"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://example.org/cars/EngineType"
+      }
+    ]
+  },
+  {
+    "@id": "http://example.org/cars/Asia",
+    "@type": [
+      "http://example.org/cars/Continent"
+    ],
+    "https://schema.org/name": [
+      {
+        "@value": "Азія"
+      }
+    ]
+  },
+  {
+    "@id": "http://example.org/cars/Volkswagen",
+    "@type": [
+      "http://example.org/cars/Manufacturer"
+    ],
+    "http://example.org/cars/countryOfOrigin": [
+      {
+        "@id": "http://example.org/cars/Germany"
+      }
+    ],
+    "http://xmlns.com/foaf/0.1/name": [
+      {
+        "@value": "Volkswagen"
+      }
+    ],
+    "https://schema.org/name": [
+      {
+        "@value": "Volkswagen"
+      }
+    ]
+  },
+  {
+    "@id": "http://example.org/cars/Car",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "uk",
+        "@value": "Автомобіль"
+      }
+    ]
+  },
+  {
+    "@id": "http://example.org/cars/ToyotaCorolla",
+    "@type": [
+      "http://example.org/cars/Car"
+    ],
+    "http://example.org/cars/hasBodyType": [
+      {
+        "@id": "http://example.org/cars/Sedan"
+      }
+    ],
+    "http://example.org/cars/hasEngineType": [
+      {
+        "@id": "http://example.org/cars/Petrol"
+      }
+    ],
+    "http://example.org/cars/manufacturedBy": [
+      {
+        "@id": "http://example.org/cars/Toyota"
+      }
+    ],
+    "https://schema.org/name": [
+      {
+        "@value": "Toyota Corolla"
+      }
+    ],
+    "https://schema.org/productionDate": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#gYear",
+        "@value": "2013"
+      }
+    ]
+  },
+  {
+    "@id": "http://example.org/cars/EngineType",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "uk",
+        "@value": "Тип двигуна"
+      }
+    ]
+  },
+  {
+    "@id": "http://example.org/cars/BMW",
+    "@type": [
+      "http://example.org/cars/Manufacturer"
+    ],
+    "http://example.org/cars/countryOfOrigin": [
+      {
+        "@id": "http://example.org/cars/Germany"
+      }
+    ],
+    "http://xmlns.com/foaf/0.1/name": [
+      {
+        "@value": "BMW"
+      }
+    ],
+    "https://schema.org/name": [
+      {
+        "@value": "BMW"
+      }
+    ]
+  },
+  {
+    "@id": "http://example.org/cars/Continent",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "uk",
+        "@value": "Частина світу"
+      }
+    ]
+  },
+  {
+    "@id": "http://example.org/cars/Honda",
+    "@type": [
+      "http://example.org/cars/Manufacturer"
+    ],
+    "http://example.org/cars/countryOfOrigin": [
+      {
+        "@id": "http://example.org/cars/Japan"
+      }
+    ],
+    "http://xmlns.com/foaf/0.1/name": [
+      {
+        "@value": "Honda"
+      }
+    ],
+    "https://schema.org/name": [
+      {
+        "@value": "Honda"
+      }
+    ]
+  },
+  {
+    "@id": "http://example.org/cars/Ford",
+    "@type": [
+      "http://example.org/cars/Manufacturer"
+    ],
+    "http://example.org/cars/countryOfOrigin": [
+      {
+        "@id": "http://example.org/cars/USA"
+      }
+    ],
+    "http://xmlns.com/foaf/0.1/name": [
+      {
+        "@value": "Ford"
+      }
+    ],
+    "https://schema.org/name": [
+      {
+        "@value": "Ford"
+      }
+    ]
+  },
+  {
+    "@id": "http://example.org/cars/ToyotaRAV4",
+    "@type": [
+      "http://example.org/cars/Car"
+    ],
+    "http://example.org/cars/hasBodyType": [
+      {
+        "@id": "http://example.org/cars/SUV"
+      }
+    ],
+    "http://example.org/cars/hasEngineType": [
+      {
+        "@id": "http://example.org/cars/Petrol"
+      }
+    ],
+    "http://example.org/cars/manufacturedBy": [
+      {
+        "@id": "http://example.org/cars/Toyota"
+      }
+    ],
+    "https://schema.org/name": [
+      {
+        "@value": "Toyota RAV4"
+      }
+    ],
+    "https://schema.org/productionDate": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#gYear",
+        "@value": "2014"
+      }
+    ]
+  },
+  {
+    "@id": "http://example.org/cars/manufacturedBy",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://example.org/cars/Car"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "uk",
+        "@value": "виготовлений виробником"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://example.org/cars/Manufacturer"
+      }
+    ]
+  }
+]

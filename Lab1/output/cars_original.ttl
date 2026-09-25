@@ -1,0 +1,220 @@
+@prefix cars: <http://example.org/cars/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+cars:BodyType a rdfs:Class ;
+    rdfs:label "Тип кузова"@uk .
+
+cars:Car a rdfs:Class ;
+    rdfs:label "Автомобіль"@uk .
+
+cars:Continent a rdfs:Class ;
+    rdfs:label "Частина світу"@uk .
+
+cars:Country a rdfs:Class ;
+    rdfs:label "Країна"@uk .
+
+cars:EngineType a rdfs:Class ;
+    rdfs:label "Тип двигуна"@uk .
+
+cars:Manufacturer a rdfs:Class ;
+    rdfs:label "Виробник"@uk .
+
+cars:BMW3Series a cars:Car ;
+    cars:hasBodyType cars:Sedan ;
+    cars:hasEngineType cars:Diesel ;
+    cars:manufacturedBy cars:BMW ;
+    schema:name "BMW 3 Series" ;
+    schema:productionDate "2013"^^xsd:gYear .
+
+cars:FordMustang a cars:Car ;
+    cars:hasBodyType cars:Coupe ;
+    cars:hasEngineType cars:Petrol ;
+    cars:manufacturedBy cars:Ford ;
+    schema:name "Ford Mustang" ;
+    schema:productionDate "2014"^^xsd:gYear .
+
+cars:HondaCivic a cars:Car ;
+    cars:hasBodyType cars:Sedan ;
+    cars:hasEngineType cars:Petrol ;
+    cars:manufacturedBy cars:Honda ;
+    schema:name "Honda Civic" ;
+    schema:productionDate "2012"^^xsd:gYear .
+
+cars:InfinitiQX70 a cars:Car ;
+    cars:hasBodyType cars:SUV ;
+    cars:hasEngineType cars:Petrol ;
+    cars:manufacturedBy cars:Infiniti ;
+    schema:name "Infiniti QX70" ;
+    schema:productionDate "2014"^^xsd:gYear .
+
+cars:NissanQashqai a cars:Car ;
+    cars:hasBodyType cars:SUV ;
+    cars:hasEngineType cars:Petrol ;
+    cars:manufacturedBy cars:Nissan ;
+    schema:name "Nissan Qashqai" ;
+    schema:productionDate "2014"^^xsd:gYear .
+
+cars:RenaultClio a cars:Car ;
+    cars:hasBodyType cars:Hatchback ;
+    cars:hasEngineType cars:Petrol ;
+    cars:manufacturedBy cars:Renault ;
+    schema:name "Renault Clio" ;
+    schema:productionDate "2012"^^xsd:gYear .
+
+cars:TeslaModelS a cars:Car ;
+    cars:hasBodyType cars:Liftback ;
+    cars:hasEngineType cars:Electric ;
+    cars:manufacturedBy cars:Tesla ;
+    schema:name "Tesla Model S" ;
+    schema:productionDate "2014"^^xsd:gYear .
+
+cars:ToyotaCorolla a cars:Car ;
+    cars:hasBodyType cars:Sedan ;
+    cars:hasEngineType cars:Petrol ;
+    cars:manufacturedBy cars:Toyota ;
+    schema:name "Toyota Corolla" ;
+    schema:productionDate "2013"^^xsd:gYear .
+
+cars:ToyotaRAV4 a cars:Car ;
+    cars:hasBodyType cars:SUV ;
+    cars:hasEngineType cars:Petrol ;
+    cars:manufacturedBy cars:Toyota ;
+    schema:name "Toyota RAV4" ;
+    schema:productionDate "2014"^^xsd:gYear .
+
+cars:VolkswagenGolf a cars:Car ;
+    cars:hasBodyType cars:Hatchback ;
+    cars:hasEngineType cars:Diesel ;
+    cars:manufacturedBy cars:Volkswagen ;
+    schema:name "Volkswagen Golf" ;
+    schema:productionDate "2013"^^xsd:gYear .
+
+cars:countryOfOrigin a rdf:Property ;
+    rdfs:label "країна походження"@uk ;
+    rdfs:domain cars:Manufacturer ;
+    rdfs:range cars:Country .
+
+cars:hasBodyType a rdf:Property ;
+    rdfs:label "має тип кузова"@uk ;
+    rdfs:domain cars:Car ;
+    rdfs:range cars:BodyType .
+
+cars:hasEngineType a rdf:Property ;
+    rdfs:label "має тип двигуна"@uk ;
+    rdfs:domain cars:Car ;
+    rdfs:range cars:EngineType .
+
+cars:locatedIn a rdf:Property ;
+    rdfs:label "розташована у"@uk ;
+    rdfs:domain cars:Country ;
+    rdfs:range cars:Continent .
+
+cars:manufacturedBy a rdf:Property ;
+    rdfs:label "виготовлений виробником"@uk ;
+    rdfs:domain cars:Car ;
+    rdfs:range cars:Manufacturer .
+
+cars:Asia a cars:Continent ;
+    schema:name "Азія" .
+
+cars:BMW a cars:Manufacturer ;
+    cars:countryOfOrigin cars:Germany ;
+    foaf:name "BMW" ;
+    schema:name "BMW" .
+
+cars:Coupe a cars:BodyType ;
+    schema:name "Купе" .
+
+cars:Electric a cars:EngineType ;
+    schema:name "Електричний" .
+
+cars:Ford a cars:Manufacturer ;
+    cars:countryOfOrigin cars:USA ;
+    foaf:name "Ford" ;
+    schema:name "Ford" .
+
+cars:France a cars:Country ;
+    cars:locatedIn cars:Europe ;
+    schema:name "Франція" .
+
+cars:Honda a cars:Manufacturer ;
+    cars:countryOfOrigin cars:Japan ;
+    foaf:name "Honda" ;
+    schema:name "Honda" .
+
+cars:Infiniti a cars:Manufacturer ;
+    cars:countryOfOrigin cars:Japan ;
+    foaf:name "Infiniti" ;
+    schema:name "Infiniti" .
+
+cars:Liftback a cars:BodyType ;
+    schema:name "Ліфтбек" .
+
+cars:Nissan a cars:Manufacturer ;
+    cars:countryOfOrigin cars:Japan ;
+    foaf:name "Nissan" ;
+    schema:name "Nissan" .
+
+cars:NorthAmerica a cars:Continent ;
+    schema:name "Північна Америка" .
+
+cars:Renault a cars:Manufacturer ;
+    cars:countryOfOrigin cars:France ;
+    foaf:name "Renault" ;
+    schema:name "Renault" .
+
+cars:Tesla a cars:Manufacturer ;
+    cars:countryOfOrigin cars:USA ;
+    foaf:name "Tesla" ;
+    schema:name "Tesla" .
+
+cars:Volkswagen a cars:Manufacturer ;
+    cars:countryOfOrigin cars:Germany ;
+    foaf:name "Volkswagen" ;
+    schema:name "Volkswagen" .
+
+cars:Diesel a cars:EngineType ;
+    schema:name "Дизельний" .
+
+cars:Europe a cars:Continent ;
+    schema:name "Європа" .
+
+cars:Germany a cars:Country ;
+    cars:locatedIn cars:Europe ;
+    dcterms:source <https://www.wikidata.org/wiki/Q183> ;
+    owl:sameAs <http://www.wikidata.org/entity/Q183> ;
+    schema:name "Німеччина" .
+
+cars:Hatchback a cars:BodyType ;
+    schema:name "Хетчбек" .
+
+cars:Toyota a cars:Manufacturer ;
+    cars:countryOfOrigin cars:Japan ;
+    foaf:name "Toyota" ;
+    schema:name "Toyota" .
+
+cars:USA a cars:Country ;
+    cars:locatedIn cars:NorthAmerica ;
+    schema:name "США" .
+
+cars:SUV a cars:BodyType ;
+    schema:name "SUV" .
+
+cars:Sedan a cars:BodyType ;
+    schema:name "Седан" .
+
+cars:Japan a cars:Country ;
+    cars:locatedIn cars:Asia ;
+    dcterms:source <https://www.wikidata.org/wiki/Q17> ;
+    owl:sameAs <http://www.wikidata.org/entity/Q17> ;
+    schema:name "Японія" .
+
+cars:Petrol a cars:EngineType ;
+    schema:name "Бензиновий" .
+

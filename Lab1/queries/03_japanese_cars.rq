@@ -1,0 +1,6 @@
+PREFIX cars: <http://example.org/cars/>
+PREFIX schema: <https://schema.org/>
+SELECT ?carName ?manufacturerName WHERE {
+  ?car a cars:Car ; schema:name ?carName ; cars:manufacturedBy ?manufacturer .
+  ?manufacturer schema:name ?manufacturerName ; cars:countryOfOrigin cars:Japan .
+} ORDER BY ?manufacturerName ?carName

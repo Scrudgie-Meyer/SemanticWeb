@@ -1,0 +1,4 @@
+Результат запиту 08_wikidata_federated.rq
+localName | wikidataResource | wikidataLabel
+Німеччина | http://www.wikidata.org/entity/Q183 | Germany
+Японія | http://www.wikidata.org/entity/Q17 | Japan
