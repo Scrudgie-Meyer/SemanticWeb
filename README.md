@@ -8,7 +8,7 @@
 
 - [Опис і запуск](Lab2/README.md)
 - [Пайплайн](Lab2/pipeline.py)
-- [Демонстраційний звіт](Lab2/output/demo/report.md)
+- [Аналіз результатів і перевірка точності](Lab2/REPORT.md)
 - [Звіт фактичного запуску Ollama](Lab2/output/live/report.md)
 
 ## Лабораторна робота №1 — RDF та SPARQL
