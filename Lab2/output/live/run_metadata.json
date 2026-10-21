@@ -1,0 +1,19 @@
+{
+  "mode": "live",
+  "llm_executed": true,
+  "provider": "ollama",
+  "model": "qwen3:4b-instruct",
+  "fact_origin": "llm_structured_output",
+  "extraction_version": "v2-direction-types-scope-2026-10-21",
+  "documents": 10,
+  "facts": 45,
+  "nodes": 46,
+  "edges": 45,
+  "communities": 12,
+  "corpus_sha256": "8cefea4ad965c0d572f791be5ca3b706a2e6450c023881e2b0f3da65b9f7b546",
+  "grounding_policy": "explicit positive Ukrainian relations; scoped statements excluded",
+  "raw_candidates": 77,
+  "rejected_candidates": 29,
+  "duplicates_removed": 3,
+  "source_documents": 10
+}

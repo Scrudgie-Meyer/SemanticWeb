@@ -1,0 +1,28 @@
+{
+  "success": true,
+  "llm": "qwen3:4b-instruct",
+  "embedding_model": "qwen3-embedding:0.6b",
+  "structured_output": {
+    "facts": [
+      {
+        "subject": {
+          "id": "part",
+          "name": "сальонний фільтр",
+          "type": "part"
+        },
+        "relation": "SELECTED_BY",
+        "object": {
+          "id": "criterion",
+          "name": "перевірка VIN",
+          "type": "criterion"
+        },
+        "evidence": "Салонний фільтр підбирають за перевіркою VIN."
+      }
+    ]
+  },
+  "short_summary": "Фільтр вибирають за VIN, перед заміною проводять огляд.",
+  "embedding_shape": [
+    2,
+    1024
+  ]
+}

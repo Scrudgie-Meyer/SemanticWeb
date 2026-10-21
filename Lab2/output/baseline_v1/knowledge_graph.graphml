@@ -1,0 +1,552 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key id="d4" for="edge" attr.name="evidence" attr.type="string" />
+  <key id="d3" for="edge" attr.name="doc_id" attr.type="string" />
+  <key id="d2" for="edge" attr.name="relation" attr.type="string" />
+  <key id="d1" for="node" attr.name="type" attr.type="string" />
+  <key id="d0" for="node" attr.name="name" attr.type="string" />
+  <graph edgedefault="directed">
+    <node id="vehicle_40e382748126837b">
+      <data key="d0">Nissan Qashqai 2011</data>
+      <data key="d1">vehicle</data>
+    </node>
+    <node id="part_294f4ac8a5b922db">
+      <data key="d0">масляний фільтр</data>
+      <data key="d1">part</data>
+    </node>
+    <node id="part_3731f8661afdf934">
+      <data key="d0">гальмівний диск</data>
+      <data key="d1">part</data>
+    </node>
+    <node id="criterion_81e2e06835f32fad">
+      <data key="d0">підбір запчастини</data>
+      <data key="d1">criterion</data>
+    </node>
+    <node id="procedure_9adbced19a7ac02f">
+      <data key="d0">перевірка VIN</data>
+      <data key="d1">procedure</data>
+    </node>
+    <node id="procedure_45084512471d48fb">
+      <data key="d0">перевірка модифікації двигуна</data>
+      <data key="d1">procedure</data>
+    </node>
+    <node id="criterion_142b5ffbf0226cd2">
+      <data key="d0">замовлення запчастини</data>
+      <data key="d1">criterion</data>
+    </node>
+    <node id="vehicle_5013c6dde68f7d86">
+      <data key="d0">автомобіль</data>
+      <data key="d1">vehicle</data>
+    </node>
+    <node id="procedure_e7c6df5ea5945372">
+      <data key="d0">перевірка автомобіля</data>
+      <data key="d1">procedure</data>
+    </node>
+    <node id="criterion_5140b43c27c670e8">
+      <data key="d0">відповідність посадкових розмірів</data>
+      <data key="d1">criterion</data>
+    </node>
+    <node id="procedure_246b961f27ca501c">
+      <data key="d0">огляд ущільнення</data>
+      <data key="d1">procedure</data>
+    </node>
+    <node id="procedure_a10bc009bd3402cd">
+      <data key="d0">заміна масляного фільтра</data>
+      <data key="d1">procedure</data>
+    </node>
+    <node id="part_19dfd5f104639a0b">
+      <data key="d0">vehicle</data>
+      <data key="d1">part</data>
+    </node>
+    <node id="criterion_5ebace6cf5d1b35e">
+      <data key="d0">навчальний код салонного фільтра</data>
+      <data key="d1">criterion</data>
+    </node>
+    <node id="part_c712800c43210c77">
+      <data key="d0">салонний фільтр</data>
+      <data key="d1">part</data>
+    </node>
+    <node id="criterion_aeb79227d0dfd6e7">
+      <data key="d0">розміри деталі</data>
+      <data key="d1">criterion</data>
+    </node>
+    <node id="symptom_e53852d9336d3dcc">
+      <data key="d0">слабкий потік повітря</data>
+      <data key="d1">symptom</data>
+    </node>
+    <node id="procedure_9010620b3c0a1277">
+      <data key="d0">огляд салонного фільтра</data>
+      <data key="d1">procedure</data>
+    </node>
+    <node id="procedure_fb5a095866cf1843">
+      <data key="d0">заміна салонного фільтра</data>
+      <data key="d1">procedure</data>
+    </node>
+    <node id="symptom_fea4cfc392bc5fe4">
+      <data key="d0">вібрація при гальмуванні</data>
+      <data key="d1">symptom</data>
+    </node>
+    <node id="procedure_9631f586b1080793">
+      <data key="d0">вимірювання биття диска</data>
+      <data key="d1">procedure</data>
+    </node>
+    <node id="procedure_1a30427af2a1ac09">
+      <data key="d0">перевірка биття гальмівного диска за допомогою індикатора годинникового типу</data>
+      <data key="d1">procedure</data>
+    </node>
+    <node id="procedure_b0db8da28cf85467">
+      <data key="d0">заміна гальмівного диска</data>
+      <data key="d1">procedure</data>
+    </node>
+    <node id="criterion_350970081690bc26">
+      <data key="d0">числовий граничний биття чи мінімальна товщина</data>
+      <data key="d1">criterion</data>
+    </node>
+    <node id="part_b6d6e5619a53cb94">
+      <data key="d0">шарнір</data>
+      <data key="d1">part</data>
+    </node>
+    <node id="symptom_7270a377f6fbd365">
+      <data key="d0">стук на нерівностях</data>
+      <data key="d1">symptom</data>
+    </node>
+    <node id="procedure_b3ffc616b85bf6bf">
+      <data key="d0">заміна стійки стабілізатора</data>
+      <data key="d1">procedure</data>
+    </node>
+    <node id="procedure_aa6e67a1c7a2b29b">
+      <data key="d0">огляд шарнірів</data>
+      <data key="d1">procedure</data>
+    </node>
+    <node id="criterion_079e4f612ce0cd1f">
+      <data key="d0">перевірка VIN</data>
+      <data key="d1">criterion</data>
+    </node>
+    <node id="part_25100aff742a6f0d">
+      <data key="d0">стійка стабілізатора</data>
+      <data key="d1">part</data>
+    </node>
+    <node id="criterion_a58e45670d9472da">
+      <data key="d0">сторона встановлення</data>
+      <data key="d1">criterion</data>
+    </node>
+    <node id="criterion_7d3a7b87b4d279b0">
+      <data key="d0">єдина причина несправності</data>
+      <data key="d1">criterion</data>
+    </node>
+    <node id="symptom_afbf3bddf22397eb">
+      <data key="d0">стук</data>
+      <data key="d1">symptom</data>
+    </node>
+    <node id="criterion_81ee125798b6226b">
+      <data key="d0">сервісна документація</data>
+      <data key="d1">criterion</data>
+    </node>
+    <node id="procedure_ea718eba5b9b2372">
+      <data key="d0">закупілля деталей</data>
+      <data key="d1">procedure</data>
+    </node>
+    <node id="symptom_17b074ca59beedf5">
+      <data key="d0">гул колеса</data>
+      <data key="d1">symptom</data>
+    </node>
+    <node id="part_6458b842c57c6a1e">
+      <data key="d0">ступичний підшипник</data>
+      <data key="d1">part</data>
+    </node>
+    <node id="procedure_48c7712887eb9f08">
+      <data key="d0">заміна ступичного підшипника</data>
+      <data key="d1">procedure</data>
+    </node>
+    <node id="criterion_536bf26ae5180e66">
+      <data key="d0">сумісність з ABS</data>
+      <data key="d1">criterion</data>
+    </node>
+    <node id="criterion_8b9f4fecf8b02df8">
+      <data key="d0">замовлення</data>
+      <data key="d1">criterion</data>
+    </node>
+    <node id="vehicle_92e22b2840350602">
+      <data key="d0">vehicle</data>
+      <data key="d1">vehicle</data>
+    </node>
+    <node id="part_013613160d76e684">
+      <data key="d0">патрубок охолодження</data>
+      <data key="d1">part</data>
+    </node>
+    <node id="procedure_b8fae6cec409321d">
+      <data key="d0">огляд з’єднань</data>
+      <data key="d1">procedure</data>
+    </node>
+    <node id="symptom_5495ebaf3c5bf9c5">
+      <data key="d0">підтікання охолоджувальної рідини</data>
+      <data key="d1">symptom</data>
+    </node>
+    <node id="criterion_9e7047f37be6f600">
+      <data key="d0">заміна патрубка охолодження</data>
+      <data key="d1">criterion</data>
+    </node>
+    <node id="criterion_f135c10f75208fdd">
+      <data key="d0">підбір патрубка охолодження</data>
+      <data key="d1">criterion</data>
+    </node>
+    <node id="symptom_4a458bd36852e43e">
+      <data key="d0">сліди рідини</data>
+      <data key="d1">symptom</data>
+    </node>
+    <node id="procedure_e555c497350feda0">
+      <data key="d0">огляд ременя та роликів</data>
+      <data key="d1">procedure</data>
+    </node>
+    <node id="symptom_9dfdfde246b9c113">
+      <data key="d0">свист приводу</data>
+      <data key="d1">symptom</data>
+    </node>
+    <node id="criterion_34c59334e1f88d53">
+      <data key="d0">заміна ременя допоміжних агрегатів</data>
+      <data key="d1">criterion</data>
+    </node>
+    <node id="part_809a67c3a4dcf7ef">
+      <data key="d0">ремінь допоміжних агрегатів</data>
+      <data key="d1">part</data>
+    </node>
+    <node id="criterion_e5d20a50ff3bba2e">
+      <data key="d0">підбір ременя за модифікацією двигуна</data>
+      <data key="d1">criterion</data>
+    </node>
+    <node id="criterion_11388674965b0286">
+      <data key="d0">підбір ременя за розмірами деталі</data>
+      <data key="d1">criterion</data>
+    </node>
+    <node id="procedure_731f20a5d260c132">
+      <data key="d0">огляд суміжних елементів приводу</data>
+      <data key="d1">procedure</data>
+    </node>
+    <node id="criterion_5c06211402eb2967">
+      <data key="d0">відсутність розміру ременя та переліку двигунів</data>
+      <data key="d1">criterion</data>
+    </node>
+    <node id="part_9628f2b1f8fa60aa">
+      <data key="d0">акумулятор</data>
+      <data key="d1">part</data>
+    </node>
+    <node id="symptom_b22169d2936596dc">
+      <data key="d0">повільне обертання стартера</data>
+      <data key="d1">symptom</data>
+    </node>
+    <node id="procedure_6c18405c2c49f753">
+      <data key="d0">тест акумулятора</data>
+      <data key="d1">procedure</data>
+    </node>
+    <node id="criterion_b31c6e48e131d76d">
+      <data key="d0">полярність</data>
+      <data key="d1">criterion</data>
+    </node>
+    <node id="criterion_95c21e1a5e9e8c3f">
+      <data key="d0">не включення до підтвердженого замовлення</data>
+      <data key="d1">criterion</data>
+    </node>
+    <node id="part_1423ba3001f87a50">
+      <data key="d0">запчастина</data>
+      <data key="d1">part</data>
+    </node>
+    <node id="part_64fcb9f3f38c01a7">
+      <data key="d0">автомобіль</data>
+      <data key="d1">part</data>
+    </node>
+    <node id="criterion_9c8aeafd83b2d35d">
+      <data key="d0">підтвердження діагностики</data>
+      <data key="d1">criterion</data>
+    </node>
+    <node id="procedure_43b40fb969fc8e66">
+      <data key="d0">підтвердження діагностики</data>
+      <data key="d1">procedure</data>
+    </node>
+    <node id="part_5eba98888bc0b1fb">
+      <data key="d0">вентиляція салону</data>
+      <data key="d1">part</data>
+    </node>
+    <node id="part_3390673d1247aeea">
+      <data key="d0">корпус</data>
+      <data key="d1">part</data>
+    </node>
+    <node id="procedure_5da985550bdf77c8">
+      <data key="d0">перевірка вентиляції салону</data>
+      <data key="d1">procedure</data>
+    </node>
+    <node id="criterion_7a1d13a262e5fc03">
+      <data key="d0">сумісність кожної деталі</data>
+      <data key="d1">criterion</data>
+    </node>
+    <edge source="vehicle_40e382748126837b" target="part_294f4ac8a5b922db" id="f001">
+      <data key="d2">HAS_PART</data>
+      <data key="d3">01_selection</data>
+      <data key="d4">У сценарії Nissan Qashqai 2011 має масляний фільтр.</data>
+    </edge>
+    <edge source="vehicle_40e382748126837b" target="part_3731f8661afdf934" id="f002">
+      <data key="d2">HAS_PART</data>
+      <data key="d3">01_selection</data>
+      <data key="d4">Nissan Qashqai 2011 має гальмівний диск.</data>
+    </edge>
+    <edge source="part_294f4ac8a5b922db" target="procedure_e7c6df5ea5945372" id="f007">
+      <data key="d2">CHECKED_BY</data>
+      <data key="d3">02_oil_filter</data>
+      <data key="d4">Працівник не переносить назву фільтра з одного замовлення в інше без перевірки автомобіля.</data>
+    </edge>
+    <edge source="part_294f4ac8a5b922db" target="criterion_5140b43c27c670e8" id="f008">
+      <data key="d2">SELECTED_BY</data>
+      <data key="d3">02_oil_filter</data>
+      <data key="d4">Під час підготовки робіт він звіряє упаковку з підтвердженою позицією та перевіряє відповідність посадкових розмірів.</data>
+    </edge>
+    <edge source="part_3731f8661afdf934" target="procedure_1a30427af2a1ac09" id="f017">
+      <data key="d2">CHECKED_BY</data>
+      <data key="d3">04_brakes</data>
+      <data key="d4">Биття гальмівного диска перевіряють індикатором годинникового типу.</data>
+    </edge>
+    <edge source="part_3731f8661afdf934" target="criterion_aeb79227d0dfd6e7" id="f019">
+      <data key="d2">SELECTED_BY</data>
+      <data key="d3">04_brakes</data>
+      <data key="d4">Гальмівний диск підбирають за розмірами деталі.</data>
+    </edge>
+    <edge source="part_3731f8661afdf934" target="criterion_350970081690bc26" id="f020">
+      <data key="d2">REQUIRES</data>
+      <data key="d3">04_brakes</data>
+      <data key="d4">У корпусі спеціально немає числового граничного биття чи мінімальної товщини: без перевіреного регламенту такі числа могли б стати помилковою рекомендацією.</data>
+    </edge>
+    <edge source="criterion_81e2e06835f32fad" target="procedure_9adbced19a7ac02f" id="f003">
+      <data key="d2">REQUIRES</data>
+      <data key="d3">01_selection</data>
+      <data key="d4">Підбір запчастини вимагає перевірки VIN.</data>
+    </edge>
+    <edge source="criterion_81e2e06835f32fad" target="procedure_45084512471d48fb" id="f004">
+      <data key="d2">REQUIRES</data>
+      <data key="d3">01_selection</data>
+      <data key="d4">Підбір запчастини вимагає перевірки модифікації двигуна.</data>
+    </edge>
+    <edge source="procedure_9adbced19a7ac02f" target="criterion_f135c10f75208fdd" id="f036">
+      <data key="d2">REQUIRES</data>
+      <data key="d3">07_cooling</data>
+      <data key="d4">Патрубок охолодження підбирають за перевіркою VIN.</data>
+    </edge>
+    <edge source="criterion_142b5ffbf0226cd2" target="procedure_9adbced19a7ac02f" id="f005">
+      <data key="d2">PRECEDES</data>
+      <data key="d3">01_selection</data>
+      <data key="d4">Перевірка VIN передує замовленню запчастини.</data>
+    </edge>
+    <edge source="vehicle_5013c6dde68f7d86" target="part_294f4ac8a5b922db" id="f006">
+      <data key="d2">HAS_PART</data>
+      <data key="d3">02_oil_filter</data>
+      <data key="d4">Масляний фільтр підбирають за розмірами деталі.</data>
+    </edge>
+    <edge source="procedure_246b961f27ca501c" target="procedure_a10bc009bd3402cd" id="f009">
+      <data key="d2">PRECEDES</data>
+      <data key="d3">02_oil_filter</data>
+      <data key="d4">Огляд ущільнення передує заміні масляного фільтра.</data>
+    </edge>
+    <edge source="part_19dfd5f104639a0b" target="criterion_5ebace6cf5d1b35e" id="f010">
+      <data key="d2">SELECTED_BY</data>
+      <data key="d3">03_cabin_filter</data>
+      <data key="d4">Навчальний код салонного фільтра — EDU-QJ10-CAB-003.</data>
+    </edge>
+    <edge source="part_c712800c43210c77" target="procedure_9adbced19a7ac02f" id="f011">
+      <data key="d2">REQUIRES</data>
+      <data key="d3">03_cabin_filter</data>
+      <data key="d4">Салонний фільтр підбирають за перевіркою VIN.</data>
+    </edge>
+    <edge source="part_c712800c43210c77" target="criterion_aeb79227d0dfd6e7" id="f012">
+      <data key="d2">REQUIRES</data>
+      <data key="d3">03_cabin_filter</data>
+      <data key="d4">Салонний фільтр підбирають за розмірами деталі.</data>
+    </edge>
+    <edge source="symptom_e53852d9336d3dcc" target="procedure_9010620b3c0a1277" id="f013">
+      <data key="d2">CHECKED_BY</data>
+      <data key="d3">03_cabin_filter</data>
+      <data key="d4">Слабкий потік повітря перевіряють оглядом салонного фільтра.</data>
+    </edge>
+    <edge source="procedure_9010620b3c0a1277" target="procedure_fb5a095866cf1843" id="f014">
+      <data key="d2">PRECEDES</data>
+      <data key="d3">03_cabin_filter</data>
+      <data key="d4">Огляд салонного фільтра передує заміні салонного фільтра.</data>
+    </edge>
+    <edge source="symptom_fea4cfc392bc5fe4" target="part_3731f8661afdf934" id="f015">
+      <data key="d2">HAS_SYMPTOM</data>
+      <data key="d3">04_brakes</data>
+      <data key="d4">Гальмівний диск пов’язаний із вібрацією при гальмуванні.</data>
+    </edge>
+    <edge source="symptom_fea4cfc392bc5fe4" target="procedure_9631f586b1080793" id="f016">
+      <data key="d2">CHECKED_BY</data>
+      <data key="d3">04_brakes</data>
+      <data key="d4">Вібрацію при гальмуванні перевіряють вимірюванням биття диска.</data>
+    </edge>
+    <edge source="procedure_9631f586b1080793" target="procedure_b0db8da28cf85467" id="f018">
+      <data key="d2">PRECEDES</data>
+      <data key="d3">04_brakes</data>
+      <data key="d4">Вимірювання биття диска передує заміні гальмівного диска.</data>
+    </edge>
+    <edge source="part_b6d6e5619a53cb94" target="symptom_7270a377f6fbd365" id="f021">
+      <data key="d2">HAS_SYMPTOM</data>
+      <data key="d3">05_suspension</data>
+      <data key="d4">Стук на нерівностях перевіряють оглядом шарнірів.</data>
+    </edge>
+    <edge source="procedure_b3ffc616b85bf6bf" target="procedure_aa6e67a1c7a2b29b" id="f022">
+      <data key="d2">PRECEDES</data>
+      <data key="d3">05_suspension</data>
+      <data key="d4">Огляд шарнірів передує заміні стійки стабілізатора.</data>
+    </edge>
+    <edge source="criterion_079e4f612ce0cd1f" target="part_25100aff742a6f0d" id="f023">
+      <data key="d2">SELECTED_BY</data>
+      <data key="d3">05_suspension</data>
+      <data key="d4">Стійку стабілізатора підбирають за перевіркою VIN.</data>
+    </edge>
+    <edge source="criterion_079e4f612ce0cd1f" target="part_6458b842c57c6a1e" id="f029">
+      <data key="d2">SELECTED_BY</data>
+      <data key="d3">06_bearing</data>
+      <data key="d4">Ступичний підшипник підбирають за перевіркою VIN.</data>
+    </edge>
+    <edge source="criterion_a58e45670d9472da" target="part_25100aff742a6f0d" id="f024">
+      <data key="d2">SELECTED_BY</data>
+      <data key="d3">05_suspension</data>
+      <data key="d4">Стійку стабілізатора підбирають за стороною встановлення.</data>
+    </edge>
+    <edge source="criterion_7d3a7b87b4d279b0" target="symptom_afbf3bddf22397eb" id="f025">
+      <data key="d2">HAS_SYMPTOM</data>
+      <data key="d3">05_suspension</data>
+      <data key="d4">Він не є твердженням про єдину причину несправності.</data>
+    </edge>
+    <edge source="criterion_81ee125798b6226b" target="procedure_ea718eba5b9b2372" id="f026">
+      <data key="d2">REQUIRES</data>
+      <data key="d3">05_suspension</data>
+      <data key="d4">Дані про момент затягування і конкретний спосіб доступу беруть із сервісної документації.</data>
+    </edge>
+    <edge source="symptom_17b074ca59beedf5" target="part_6458b842c57c6a1e" id="f027">
+      <data key="d2">CHECKED_BY</data>
+      <data key="d3">06_bearing</data>
+      <data key="d4">Гул колеса перевіряють діагностикою ступичного підшипника.</data>
+    </edge>
+    <edge source="procedure_48c7712887eb9f08" target="part_6458b842c57c6a1e" id="f028">
+      <data key="d2">PRECEDES</data>
+      <data key="d3">06_bearing</data>
+      <data key="d4">Діагностика ступичного підшипника передує заміні ступичного підшипника.</data>
+    </edge>
+    <edge source="criterion_536bf26ae5180e66" target="part_6458b842c57c6a1e" id="f030">
+      <data key="d2">SELECTED_BY</data>
+      <data key="d3">06_bearing</data>
+      <data key="d4">Ступичний підшипник підбирають за сумісністю з ABS.</data>
+    </edge>
+    <edge source="criterion_8b9f4fecf8b02df8" target="part_6458b842c57c6a1e" id="f031">
+      <data key="d2">SELECTED_BY</data>
+      <data key="d3">06_bearing</data>
+      <data key="d4">У замовленні позначають, який саме вузол діагностовано і на якому боці він стоїть.</data>
+    </edge>
+    <edge source="vehicle_92e22b2840350602" target="part_013613160d76e684" id="f032">
+      <data key="d2">HAS_PART</data>
+      <data key="d3">07_cooling</data>
+      <data key="d4">Патрубок охолодження пов’язаний із підтіканням охолоджувальної рідини.</data>
+    </edge>
+    <edge source="vehicle_92e22b2840350602" target="symptom_4a458bd36852e43e" id="f037">
+      <data key="d2">HAS_SYMPTOM</data>
+      <data key="d3">07_cooling</data>
+      <data key="d4">У навчальному випадку власник помітив сліди рідини і звернувся до майстерні.</data>
+    </edge>
+    <edge source="vehicle_92e22b2840350602" target="part_9628f2b1f8fa60aa" id="f044">
+      <data key="d2">HAS_PART</data>
+      <data key="d3">09_battery</data>
+      <data key="d4">Акумулятор пов’язаний із повільним обертанням стартера.</data>
+    </edge>
+    <edge source="part_013613160d76e684" target="criterion_f135c10f75208fdd" id="f035">
+      <data key="d2">REQUIRES</data>
+      <data key="d3">07_cooling</data>
+      <data key="d4">Патрубок охолодження підбирають за модифікацією двигуна.</data>
+    </edge>
+    <edge source="procedure_b8fae6cec409321d" target="symptom_5495ebaf3c5bf9c5" id="f033">
+      <data key="d2">CHECKED_BY</data>
+      <data key="d3">07_cooling</data>
+      <data key="d4">Підтікання охолоджувальної рідини перевіряють оглядом з’єднань.</data>
+    </edge>
+    <edge source="procedure_b8fae6cec409321d" target="criterion_9e7047f37be6f600" id="f034">
+      <data key="d2">PRECEDES</data>
+      <data key="d3">07_cooling</data>
+      <data key="d4">Огляд з’єднань передує заміні патрубка охолодження.</data>
+    </edge>
+    <edge source="procedure_e555c497350feda0" target="symptom_9dfdfde246b9c113" id="f038">
+      <data key="d2">CHECKED_BY</data>
+      <data key="d3">08_belt</data>
+      <data key="d4">Свист приводу перевіряють оглядом ременя та роликів.</data>
+    </edge>
+    <edge source="procedure_e555c497350feda0" target="criterion_34c59334e1f88d53" id="f039">
+      <data key="d2">PRECEDES</data>
+      <data key="d3">08_belt</data>
+      <data key="d4">Огляд ременя та роликів передує заміні ременя допоміжних агрегатів.</data>
+    </edge>
+    <edge source="part_809a67c3a4dcf7ef" target="criterion_e5d20a50ff3bba2e" id="f040">
+      <data key="d2">SELECTED_BY</data>
+      <data key="d3">08_belt</data>
+      <data key="d4">Ремінь допоміжних агрегатів підбирають за модифікацією двигуна.</data>
+    </edge>
+    <edge source="part_809a67c3a4dcf7ef" target="criterion_11388674965b0286" id="f041">
+      <data key="d2">SELECTED_BY</data>
+      <data key="d3">08_belt</data>
+      <data key="d4">Ремінь допоміжних агрегатів підбирають за розмірами деталі.</data>
+    </edge>
+    <edge source="part_809a67c3a4dcf7ef" target="procedure_731f20a5d260c132" id="f042">
+      <data key="d2">HAS_SYMPTOM</data>
+      <data key="d3">08_belt</data>
+      <data key="d4">Майстер оглядає не лише ремінь, але й суміжні елементи приводу.</data>
+    </edge>
+    <edge source="part_809a67c3a4dcf7ef" target="criterion_5c06211402eb2967" id="f043">
+      <data key="d2">REQUIRES</data>
+      <data key="d3">08_belt</data>
+      <data key="d4">У корпусі немає розміру ременя чи переліку двигунів з однаковою деталлю.</data>
+    </edge>
+    <edge source="part_9628f2b1f8fa60aa" target="criterion_b31c6e48e131d76d" id="f046">
+      <data key="d2">SELECTED_BY</data>
+      <data key="d3">09_battery</data>
+      <data key="d4">Акумулятор підбирають за полярністю.</data>
+    </edge>
+    <edge source="part_9628f2b1f8fa60aa" target="criterion_aeb79227d0dfd6e7" id="f047">
+      <data key="d2">SELECTED_BY</data>
+      <data key="d3">09_battery</data>
+      <data key="d4">Акумулятор підбирають за розмірами деталі.</data>
+    </edge>
+    <edge source="symptom_b22169d2936596dc" target="procedure_6c18405c2c49f753" id="f045">
+      <data key="d2">CHECKED_BY</data>
+      <data key="d3">09_battery</data>
+      <data key="d4">Повільне обертання стартера перевіряють тестом акумулятора.</data>
+    </edge>
+    <edge source="procedure_6c18405c2c49f753" target="criterion_95c21e1a5e9e8c3f" id="f048">
+      <data key="d2">REQUIRES</data>
+      <data key="d3">09_battery</data>
+      <data key="d4">Якщо тест не підтвердив потребу заміни, позицію не включають до підтвердженого замовлення.</data>
+    </edge>
+    <edge source="part_1423ba3001f87a50" target="part_64fcb9f3f38c01a7" id="f049">
+      <data key="d2">HAS_PART</data>
+      <data key="d3">10_order</data>
+      <data key="d4">Замовлення запчастини вимагає перевірки VIN.</data>
+    </edge>
+    <edge source="part_1423ba3001f87a50" target="criterion_9c8aeafd83b2d35d" id="f050">
+      <data key="d2">REQUIRES</data>
+      <data key="d3">10_order</data>
+      <data key="d4">Замовлення запчастини вимагає підтвердження діагностики.</data>
+    </edge>
+    <edge source="part_1423ba3001f87a50" target="procedure_43b40fb969fc8e66" id="f051">
+      <data key="d2">PRECEDES</data>
+      <data key="d3">10_order</data>
+      <data key="d4">Підтвердження діагностики передує замовленню запчастини.</data>
+    </edge>
+    <edge source="part_1423ba3001f87a50" target="criterion_7a1d13a262e5fc03" id="f054">
+      <data key="d2">SELECTED_BY</data>
+      <data key="d3">10_order</data>
+      <data key="d4">Підсумкова заявка має поєднати результати діагностики із сумісністю кожної деталі.</data>
+    </edge>
+    <edge source="part_5eba98888bc0b1fb" target="symptom_e53852d9336d3dcc" id="f052">
+      <data key="d2">HAS_SYMPTOM</data>
+      <data key="d3">10_order</data>
+      <data key="d4">В одному зверненні власник називає слабкий потік повітря, вібрацію при гальмуванні та гул колеса.</data>
+    </edge>
+    <edge source="part_3390673d1247aeea" target="procedure_5da985550bdf77c8" id="f053">
+      <data key="d2">HAS_PART</data>
+      <data key="d3">10_order</data>
+      <data key="d4">Працівник відкриває відповідні документи корпусу і формує три напрямки перевірки: вентиляція салону, гальмівний вузол і ступичний вузол.</data>
+    </edge>
+  </graph>
+</graphml>

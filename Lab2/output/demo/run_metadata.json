@@ -1,0 +1,13 @@
+{
+  "mode": "demo",
+  "llm_executed": false,
+  "provider": null,
+  "model": null,
+  "fact_origin": "author_annotations",
+  "documents": 10,
+  "facts": 54,
+  "nodes": 49,
+  "edges": 54,
+  "communities": 12,
+  "corpus_sha256": "8cefea4ad965c0d572f791be5ca3b706a2e6450c023881e2b0f3da65b9f7b546"
+}

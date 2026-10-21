@@ -1,0 +1,524 @@
+[
+  {
+    "fact": {
+      "evidence": "Майстер спочатку записує дані автомобіля, потім звіряє каталог і лише після цього формує перелік позицій.",
+      "object": {
+        "id": "catalog_verification",
+        "name": "Звірка каталогу",
+        "type": "procedure"
+      },
+      "relation": "SELECTED_BY",
+      "subject": {
+        "id": "part_selection",
+        "name": "Підбір запчастини",
+        "type": "procedure"
+      },
+      "doc_id": "01_selection"
+    },
+    "reason": "1 validation error for Extraction\nfacts.0\n  Value error, SELECTED_BY: invalid endpoint types ('procedure', 'procedure'); allowed {('part', 'criterion')} [type=value_error, input_value={'evidence': 'Майст...', 'type': 'procedure'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.13/v/value_error"
+  },
+  {
+    "fact": {
+      "evidence": "Масляний фільтр підбирають за модифікацією двигуна.",
+      "object": {
+        "id": "filter",
+        "name": "Масляний фільтр",
+        "type": "part"
+      },
+      "relation": "SELECTED_BY",
+      "subject": {
+        "id": "engine_modification",
+        "name": "Модифікація двигуна",
+        "type": "criterion"
+      },
+      "doc_id": "02_oil_filter"
+    },
+    "reason": "1 validation error for Extraction\nfacts.0\n  Value error, SELECTED_BY: invalid endpoint types ('criterion', 'part'); allowed {('part', 'criterion')} [type=value_error, input_value={'evidence': 'Масля...', 'type': 'criterion'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.13/v/value_error"
+  },
+  {
+    "fact": {
+      "evidence": "Планове обслуговування вимагає перевірки масляного фільтра.",
+      "object": {
+        "id": "planned_service",
+        "name": "Планове обслуговування",
+        "type": "procedure"
+      },
+      "relation": "REQUIRES",
+      "subject": {
+        "id": "filter",
+        "name": "Масляний фільтр",
+        "type": "part"
+      },
+      "doc_id": "02_oil_filter"
+    },
+    "reason": "1 validation error for Extraction\nfacts.0\n  Value error, REQUIRES: invalid endpoint types ('part', 'procedure'); allowed {('procedure', 'criterion'), ('procedure', 'part'), ('procedure', 'procedure')} [type=value_error, input_value={'evidence': 'Плано...тр', 'type': 'part'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.13/v/value_error"
+  },
+  {
+    "fact": {
+      "evidence": "Працівник звіряє упаковку з підтвердженою позицією та перевіряє відповідність посадкових розмірів.",
+      "object": {
+        "id": "dimensional_fit",
+        "name": "Відповідність посадкових розмірів",
+        "type": "criterion"
+      },
+      "relation": "CHECKED_BY",
+      "subject": {
+        "id": "filter",
+        "name": "Масляний фільтр",
+        "type": "part"
+      },
+      "doc_id": "02_oil_filter"
+    },
+    "reason": "1 validation error for Extraction\nfacts.0\n  Value error, CHECKED_BY: invalid endpoint types ('part', 'criterion'); allowed {('symptom', 'procedure')} [type=value_error, input_value={'evidence': 'Праці...тр', 'type': 'part'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.13/v/value_error"
+  },
+  {
+    "fact": {
+      "evidence": "Працівник не переносить назву фільтра з одного замовлення в інше без перевірки автомобіля.",
+      "object": {
+        "id": "vehicle_check",
+        "name": "Перевірка автомобіля",
+        "type": "procedure"
+      },
+      "relation": "REQUIRES",
+      "subject": {
+        "id": "filter",
+        "name": "Масляний фільтр",
+        "type": "part"
+      },
+      "doc_id": "02_oil_filter"
+    },
+    "reason": "1 validation error for Extraction\nfacts.0\n  Value error, REQUIRES: invalid endpoint types ('part', 'procedure'); allowed {('procedure', 'criterion'), ('procedure', 'part'), ('procedure', 'procedure')} [type=value_error, input_value={'evidence': 'Праці...тр', 'type': 'part'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.13/v/value_error"
+  },
+  {
+    "fact": {
+      "evidence": "Салонний фільтр пов’язаний зі слабким потоком повітря.",
+      "object": {
+        "id": "symptom",
+        "name": "Слабкий потік повітря",
+        "type": "symptom"
+      },
+      "relation": "HAS_SYMPTOM",
+      "subject": {
+        "id": "filter",
+        "name": "Салонний фільтр",
+        "type": "part"
+      },
+      "doc_id": "03_cabin_filter"
+    },
+    "reason": "wrong_direction_or_ungrounded_entity: 'Слабкий потік повітря' is not supported on its side of the relation"
+  },
+  {
+    "fact": {
+      "evidence": "Забруднення фільтра є підставою перевірити деталь.",
+      "object": {
+        "id": "criterion",
+        "name": "Забруднення фільтра",
+        "type": "criterion"
+      },
+      "relation": "REQUIRES",
+      "subject": {
+        "id": "inspection",
+        "name": "Огляд салонного фільтра",
+        "type": "procedure"
+      },
+      "doc_id": "03_cabin_filter"
+    },
+    "reason": "Цитата не є дослівним непорожнім фрагментом документа"
+  },
+  {
+    "fact": {
+      "evidence": "Слабкий потік повітря в салоні.",
+      "object": {
+        "id": "symptom",
+        "name": "Слабкий потік повітря",
+        "type": "symptom"
+      },
+      "relation": "HAS_SYMPTOM",
+      "subject": {
+        "id": "vehicle",
+        "name": "Автомобіль",
+        "type": "vehicle"
+      },
+      "doc_id": "03_cabin_filter"
+    },
+    "reason": "1 validation error for Extraction\nfacts.0\n  Value error, HAS_SYMPTOM: invalid endpoint types ('vehicle', 'symptom'); allowed {('part', 'symptom')} [type=value_error, input_value={'evidence': 'Слабк...ь', 'type': 'vehicle'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.13/v/value_error"
+  },
+  {
+    "fact": {
+      "evidence": "Навчальний код салонного фільтра — EDU-QJ10-CAB-003.",
+      "object": {
+        "id": "code",
+        "name": "EDU-QJ10-CAB-003",
+        "type": "criterion"
+      },
+      "relation": "REQUIRES",
+      "subject": {
+        "id": "filter",
+        "name": "Салонний фільтр",
+        "type": "part"
+      },
+      "doc_id": "03_cabin_filter"
+    },
+    "reason": "1 validation error for Extraction\nfacts.0\n  Value error, REQUIRES: invalid endpoint types ('part', 'criterion'); allowed {('procedure', 'criterion'), ('procedure', 'part'), ('procedure', 'procedure')} [type=value_error, input_value={'evidence': 'Навча...тр', 'type': 'part'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.13/v/value_error"
+  },
+  {
+    "fact": {
+      "evidence": "Биття гальмівного диска перевіряють індикатором годинникового типу.",
+      "object": {
+        "id": "indicator",
+        "name": "Індикатор годинникового типу",
+        "type": "procedure"
+      },
+      "relation": "CHECKED_BY",
+      "subject": {
+        "id": "disc_wobble",
+        "name": "Биття гальмівного диска",
+        "type": "symptom"
+      },
+      "doc_id": "04_brakes"
+    },
+    "reason": "type_name_mismatch: procedure name must denote an action, not a component or tool"
+  },
+  {
+    "fact": {
+      "evidence": "Гальмівні колодки підбирають за типом супорта.",
+      "object": {
+        "id": "support_type_criterion",
+        "name": "Тип супорта",
+        "type": "criterion"
+      },
+      "relation": "SELECTED_BY",
+      "subject": {
+        "id": "brake_pads",
+        "name": "Гальмівні колодки",
+        "type": "part"
+      },
+      "doc_id": "04_brakes"
+    },
+    "reason": "wrong_direction_or_ungrounded_entity: 'Тип супорта' is not supported on its side of the relation"
+  },
+  {
+    "fact": {
+      "evidence": "Працівник звіряє сумісність компонентів гальмівного вузла і не замовляє комплект лише за фотографією.",
+      "object": {
+        "id": "component_compatibility_check",
+        "name": "Звірка сумісності компонентів гальмівного вузла",
+        "type": "procedure"
+      },
+      "relation": "REQUIRES",
+      "subject": {
+        "id": "brake_assembly",
+        "name": "Гальмівний вузол",
+        "type": "part"
+      },
+      "doc_id": "04_brakes"
+    },
+    "reason": "1 validation error for Extraction\nfacts.0\n  Value error, REQUIRES: invalid endpoint types ('part', 'procedure'); allowed {('procedure', 'criterion'), ('procedure', 'part'), ('procedure', 'procedure')} [type=value_error, input_value={'evidence': 'Праці...ол', 'type': 'part'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.13/v/value_error"
+  },
+  {
+    "fact": {
+      "evidence": "Стійка стабілізатора пов’язана зі стуком на нерівностях.",
+      "object": {
+        "id": "stability_link",
+        "name": "стійка стабілізатора",
+        "type": "part"
+      },
+      "relation": "HAS_SYMPTOM",
+      "subject": {
+        "id": "noise_on_uneven",
+        "name": "стук на нерівностях",
+        "type": "symptom"
+      },
+      "doc_id": "05_suspension"
+    },
+    "reason": "1 validation error for Extraction\nfacts.0\n  Value error, HAS_SYMPTOM: invalid endpoint types ('symptom', 'part'); allowed {('part', 'symptom')} [type=value_error, input_value={'evidence': 'Стійк...х', 'type': 'symptom'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.13/v/value_error"
+  },
+  {
+    "fact": {
+      "evidence": "Діагностика передує закупівлі.",
+      "object": {
+        "id": "purchase",
+        "name": "закупівля",
+        "type": "procedure"
+      },
+      "relation": "PRECEDES",
+      "subject": {
+        "id": "diagnosis",
+        "name": "діагностика",
+        "type": "procedure"
+      },
+      "doc_id": "05_suspension"
+    },
+    "reason": "Цитата не є дослівним непорожнім фрагментом документа"
+  },
+  {
+    "fact": {
+      "evidence": "Перевірка сумісності залишається окремим етапом.",
+      "object": {
+        "id": "compatibility_check",
+        "name": "перевірка сумісності",
+        "type": "procedure"
+      },
+      "relation": "REQUIRES",
+      "subject": {
+        "id": "replacement_stability",
+        "name": "заміна стійки стабілізатора",
+        "type": "procedure"
+      },
+      "doc_id": "05_suspension"
+    },
+    "reason": "Цитата не є дослівним непорожнім фрагментом документа"
+  },
+  {
+    "fact": {
+      "evidence": "Перед замовленням працівник записує сторону встановлення і каталожне підтвердження.",
+      "object": {
+        "id": "criterion_side",
+        "name": "сторона встановлення",
+        "type": "criterion"
+      },
+      "relation": "SELECTED_BY",
+      "subject": {
+        "id": "stability_link",
+        "name": "стійка стабілізатора",
+        "type": "part"
+      },
+      "doc_id": "05_suspension"
+    },
+    "reason": "explicit_relation_missing: quote must explicitly express the chosen relation"
+  },
+  {
+    "fact": {
+      "evidence": "Ступичний підшипник пов’язаний із гулом колеса, що змінюється в повороті.",
+      "object": {
+        "id": "hub",
+        "name": "Ступичний підшипник",
+        "type": "part"
+      },
+      "relation": "HAS_SYMPTOM",
+      "subject": {
+        "id": "noise",
+        "name": "Гул колеса",
+        "type": "symptom"
+      },
+      "doc_id": "06_bearing"
+    },
+    "reason": "1 validation error for Extraction\nfacts.0\n  Value error, HAS_SYMPTOM: invalid endpoint types ('symptom', 'part'); allowed {('part', 'symptom')} [type=value_error, input_value={'evidence': 'Ступи...а', 'type': 'symptom'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.13/v/value_error"
+  },
+  {
+    "fact": {
+      "evidence": "Працівник записує скаргу як спостереження і не оголошує її достатнім доказом несправності.",
+      "object": {
+        "id": "criterion",
+        "name": "Достатній доказ несправності",
+        "type": "criterion"
+      },
+      "relation": "REQUIRES",
+      "subject": {
+        "id": "noise",
+        "name": "Гул колеса",
+        "type": "symptom"
+      },
+      "doc_id": "06_bearing"
+    },
+    "reason": "1 validation error for Extraction\nfacts.0\n  Value error, REQUIRES: invalid endpoint types ('symptom', 'criterion'); allowed {('procedure', 'criterion'), ('procedure', 'part'), ('procedure', 'procedure')} [type=value_error, input_value={'evidence': 'Праці...а', 'type': 'symptom'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.13/v/value_error"
+  },
+  {
+    "fact": {
+      "evidence": "Побутовий опис шуму можна пов’язати з технічною назвою вузла.",
+      "object": {
+        "id": "criterion",
+        "name": "Побутовий опис шуму",
+        "type": "criterion"
+      },
+      "relation": "HAS_SYMPTOM",
+      "subject": {
+        "id": "hub",
+        "name": "Ступичний підшипник",
+        "type": "part"
+      },
+      "doc_id": "06_bearing"
+    },
+    "reason": "1 validation error for Extraction\nfacts.0\n  Value error, HAS_SYMPTOM: invalid endpoint types ('part', 'criterion'); allowed {('part', 'symptom')} [type=value_error, input_value={'evidence': 'Побут...ик', 'type': 'part'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.13/v/value_error"
+  },
+  {
+    "fact": {
+      "evidence": "Після перевірки майстер звіряє виконання вузла за каталогом.",
+      "object": {
+        "id": "procedure_check",
+        "name": "Звірка виконання вузла за каталогом",
+        "type": "procedure"
+      },
+      "relation": "REQUIRES",
+      "subject": {
+        "id": "hub",
+        "name": "Ступичний підшипник",
+        "type": "part"
+      },
+      "doc_id": "06_bearing"
+    },
+    "reason": "1 validation error for Extraction\nfacts.0\n  Value error, REQUIRES: invalid endpoint types ('part', 'procedure'); allowed {('procedure', 'criterion'), ('procedure', 'part'), ('procedure', 'procedure')} [type=value_error, input_value={'evidence': 'Після ...ик', 'type': 'part'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.13/v/value_error"
+  },
+  {
+    "fact": {
+      "evidence": "Патрубок охолодження пов’язаний із підтіканням охолоджувальної рідини.",
+      "object": {
+        "id": "pipe",
+        "name": "патрубок охолодження",
+        "type": "part"
+      },
+      "relation": "HAS_SYMPTOM",
+      "subject": {
+        "id": "leakage",
+        "name": "підтікання охолоджувальної рідини",
+        "type": "symptom"
+      },
+      "doc_id": "07_cooling"
+    },
+    "reason": "1 validation error for Extraction\nfacts.0\n  Value error, HAS_SYMPTOM: invalid endpoint types ('symptom', 'part'); allowed {('part', 'symptom')} [type=value_error, input_value={'evidence': 'Патру...и', 'type': 'symptom'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.13/v/value_error"
+  },
+  {
+    "fact": {
+      "evidence": "Ремінь допоміжних агрегатів пов’язаний зі свистом приводу.",
+      "object": {
+        "id": "belt",
+        "name": "Ремінь допоміжних агрегатів",
+        "type": "part"
+      },
+      "relation": "HAS_SYMPTOM",
+      "subject": {
+        "id": "whistle",
+        "name": "Свист приводу",
+        "type": "symptom"
+      },
+      "doc_id": "08_belt"
+    },
+    "reason": "1 validation error for Extraction\nfacts.0\n  Value error, HAS_SYMPTOM: invalid endpoint types ('symptom', 'part'); allowed {('part', 'symptom')} [type=value_error, input_value={'evidence': 'Ремін...у', 'type': 'symptom'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.13/v/value_error"
+  },
+  {
+    "fact": {
+      "evidence": "Майстер оглядає не лише ремінь, але й суміжні елементи приводу.",
+      "object": {
+        "id": "elements",
+        "name": "Суміжні елементи приводу",
+        "type": "part"
+      },
+      "relation": "HAS_PART",
+      "subject": {
+        "id": "whistle",
+        "name": "Свист приводу",
+        "type": "symptom"
+      },
+      "doc_id": "08_belt"
+    },
+    "reason": "1 validation error for Extraction\nfacts.0\n  Value error, HAS_PART: invalid endpoint types ('symptom', 'part'); allowed {('vehicle', 'part')} [type=value_error, input_value={'evidence': 'Майст...у', 'type': 'symptom'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.13/v/value_error"
+  },
+  {
+    "fact": {
+      "evidence": "Результат підбору фіксують після перевірки конкретної комплектації.",
+      "object": {
+        "id": "criterion_specific_setup",
+        "name": "Конкретна комплектація",
+        "type": "criterion"
+      },
+      "relation": "REQUIRES",
+      "subject": {
+        "id": "selection",
+        "name": "Підбір ременя",
+        "type": "procedure"
+      },
+      "doc_id": "08_belt"
+    },
+    "reason": "Цитата не є дослівним непорожнім фрагментом документа"
+  },
+  {
+    "fact": {
+      "evidence": "Акумулятор пов’язаний із повільним обертанням стартера.",
+      "object": {
+        "id": "battery",
+        "name": "Акумулятор",
+        "type": "part"
+      },
+      "relation": "HAS_SYMPTOM",
+      "subject": {
+        "id": "slow_starter_rotation",
+        "name": "Повільне обертання стартера",
+        "type": "symptom"
+      },
+      "doc_id": "09_battery"
+    },
+    "reason": "1 validation error for Extraction\nfacts.0\n  Value error, HAS_SYMPTOM: invalid endpoint types ('symptom', 'part'); allowed {('part', 'symptom')} [type=value_error, input_value={'evidence': 'Акуму...а', 'type': 'symptom'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.13/v/value_error"
+  },
+  {
+    "fact": {
+      "evidence": "Працівник відкриває відповідні документи корпусу і формує три напрямки перевірки: вентиляція салону, гальмівний вузол і ступичний вузол.",
+      "object": {
+        "id": "ventilation_check",
+        "name": "Перевірка вентиляції салону",
+        "type": "procedure"
+      },
+      "relation": "HAS_PART",
+      "subject": {
+        "id": "chassis_documents",
+        "name": "Документи корпусу",
+        "type": "vehicle"
+      },
+      "doc_id": "10_order"
+    },
+    "reason": "1 validation error for Extraction\nfacts.0\n  Value error, HAS_PART: invalid endpoint types ('vehicle', 'procedure'); allowed {('vehicle', 'part')} [type=value_error, input_value={'evidence': 'Праці...у', 'type': 'vehicle'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.13/v/value_error"
+  },
+  {
+    "fact": {
+      "evidence": "Працівник відкриває відповідні документи корпусу і формує три напрямки перевірки: вентиляція салону, гальмівний вузол і ступичний вузол.",
+      "object": {
+        "id": "brake_node_check",
+        "name": "Перевірка гальмівного вузла",
+        "type": "procedure"
+      },
+      "relation": "HAS_PART",
+      "subject": {
+        "id": "chassis_documents",
+        "name": "Документи корпусу",
+        "type": "vehicle"
+      },
+      "doc_id": "10_order"
+    },
+    "reason": "1 validation error for Extraction\nfacts.0\n  Value error, HAS_PART: invalid endpoint types ('vehicle', 'procedure'); allowed {('vehicle', 'part')} [type=value_error, input_value={'evidence': 'Праці...у', 'type': 'vehicle'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.13/v/value_error"
+  },
+  {
+    "fact": {
+      "evidence": "Працівник відкриває відповідні документи корпусу і формує три напрямки перевірки: вентиляція салону, гальмівний вузол і ступичний вузол.",
+      "object": {
+        "id": "wheel_node_check",
+        "name": "Перевірка ступичного вузла",
+        "type": "procedure"
+      },
+      "relation": "HAS_PART",
+      "subject": {
+        "id": "chassis_documents",
+        "name": "Документи корпусу",
+        "type": "vehicle"
+      },
+      "doc_id": "10_order"
+    },
+    "reason": "1 validation error for Extraction\nfacts.0\n  Value error, HAS_PART: invalid endpoint types ('vehicle', 'procedure'); allowed {('vehicle', 'part')} [type=value_error, input_value={'evidence': 'Праці...у', 'type': 'vehicle'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.13/v/value_error"
+  },
+  {
+    "fact": {
+      "evidence": "В одному зверненні власник називає слабкий потік повітря, вібрацію при гальмуванні та гул колеса.",
+      "object": {
+        "id": "weak_air_flow",
+        "name": "Слабкий потік повітря",
+        "type": "symptom"
+      },
+      "relation": "HAS_SYMPTOM",
+      "subject": {
+        "id": "customer_complaint",
+        "name": "Звернення власника",
+        "type": "part"
+      },
+      "doc_id": "10_order"
+    },
+    "reason": "explicit_relation_missing: quote must explicitly express the chosen relation"
+  }
+]

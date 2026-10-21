@@ -1,0 +1,9 @@
+{
+  "backend": "ollama",
+  "shape": [
+    12,
+    1024
+  ],
+  "semantic": true,
+  "model": "qwen3-embedding:0.6b"
+}

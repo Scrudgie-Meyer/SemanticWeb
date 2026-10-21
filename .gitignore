@@ -1,13 +1,48 @@
+# Python environments and generated caches
 .venv/
 venv/
+env/
 __pycache__/
 *.py[cod]
 .pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
 .mplconfig/
+.coverage
+.coverage.*
+htmlcov/
+
+# Local credentials. Keep the public configuration template.
 .env
 .env.*
+!**/.env.example
+
+# Editors, OS metadata and temporary files
 .DS_Store
 Thumbs.db
 .idea/
 .vscode/
+*.log
+*.tmp
+*.bak
+*.symlink-backup
+~$*
+
+# Lab2: local LLM caches, weights and unfinished diagnostic runs
+Lab2/.mplconfig/
+Lab2/output/**/extraction_cache/
+Lab2/output/**/summary_cache/
+Lab2/output/initial_thinking_run/
+Lab2/.cache/
+Lab2/.ollama/
+Lab2/models/
+*.gguf
+*.safetensors
+pytorch_model*.bin
+
+# Exported repository archives
 *-github.zip
+
+# Intentionally kept: corpus, source code, requirements, reports, review CSV,
+# facts/chunks/results JSON, NumPy index, GraphML, PNG and SVG visualizations.

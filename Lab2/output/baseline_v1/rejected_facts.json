@@ -1,0 +1,92 @@
+[
+  {
+    "fact": {
+      "subject": {
+        "id": "vehicle",
+        "name": "Nissan Qashqai 2011",
+        "type": "vehicle"
+      },
+      "relation": "HAS_PART",
+      "object": {
+        "id": "part",
+        "name": "салонний фільтр",
+        "type": "part"
+      },
+      "evidence": "Nissan Qashqій 2011 має салонний фільтр.",
+      "doc_id": "01_selection"
+    },
+    "reason": "Цитата не є дослівним непорожнім фрагментом документа"
+  },
+  {
+    "fact": {
+      "subject": {
+        "id": "vehicle",
+        "name": "автомобіль",
+        "type": "vehicle"
+      },
+      "relation": "HAS_PART",
+      "object": {
+        "id": "part",
+        "name": "масляний фільтр",
+        "type": "part"
+      },
+      "evidence": "Масляний фільтр підбирають за модифікацією двигуна.",
+      "doc_id": "02_oil_filter"
+    },
+    "reason": "Цитата не є дослівним непорожнім фрагментом документа"
+  },
+  {
+    "fact": {
+      "subject": {
+        "id": "part",
+        "name": "салонний фільтр",
+        "type": "part"
+      },
+      "relation": "HAS_SYMPTOM",
+      "object": {
+        "id": "слабкий потік повітря",
+        "name": "слабкий потік повітря",
+        "type": "symptom"
+      },
+      "evidence": "Слабкий потік повітря в салоні.",
+      "doc_id": "03_cabin_filter"
+    },
+    "reason": "Цитата не є дослівним непорожнім фрагментом документа"
+  },
+  {
+    "fact": {
+      "subject": {
+        "id": "EDU-QJ10-HUB-00",
+        "name": "гул колеса в повороті",
+        "type": "symptom"
+      },
+      "relation": "HAS_SYMPTOM",
+      "object": {
+        "id": "EDU-QJ10-HUB-006",
+        "name": "ступичний підшипник",
+        "type": "part"
+      },
+      "evidence": "Гул колеса в повороті пов’язаний із ступичним підшипником.",
+      "doc_id": "06_bearing"
+    },
+    "reason": "Цитата не є дослівним непорожнім фрагментом документа"
+  },
+  {
+    "fact": {
+      "subject": {
+        "id": "procedure",
+        "name": "тест акумулятора",
+        "type": "procedure"
+      },
+      "relation": "PRECEDES",
+      "object": {
+        "id": "procedure",
+        "name": "заміна акумулятора",
+        "type": "procedure"
+      },
+      "evidence": "Тест акумулянка передує заміні акумулятора.",
+      "doc_id": "09_battery"
+    },
+    "reason": "Цитата не є дослівним непорожнім фрагментом документа"
+  }
+]

@@ -1,0 +1,10 @@
+[
+  {"id":"q1","kind":"simple","question":"Який навчальний код має салонний фільтр?","expected_docs":["03_cabin_filter"]},
+  {"id":"q2","kind":"simple","question":"Яка процедура перевіряє биття гальмівного диска?","expected_docs":["04_brakes"]},
+  {"id":"q3","kind":"simple","question":"Яку деталь перевіряють при гулі колеса, що змінюється в повороті?","expected_docs":["06_bearing"]},
+  {"id":"q4","kind":"global","question":"Які перевірки повторюються під час підбору різних запчастин і як пов’язані симптоми, діагностика та заміна?","expected_docs":["01_selection","02_oil_filter","03_cabin_filter","04_brakes","05_suspension","06_bearing","07_cooling","08_belt","09_battery","10_order"]},
+  {"id":"q5","kind":"global","question":"Як сформувати замовлення після скарг на слабкий потік повітря, вібрацію при гальмуванні та гул колеса?","expected_docs":["03_cabin_filter","04_brakes","06_bearing","10_order"]},
+  {"id":"q6","kind":"paraphrase","question":"У салоні душно, а з дефлекторів ледь дме. Що оглянути?","expected_docs":["03_cabin_filter"]},
+  {"id":"q7","kind":"exact","question":"EDU-QJ10-CAB-003","expected_docs":["03_cabin_filter"]},
+  {"id":"q8","kind":"paraphrase","question":"Which filter should I check if air barely flows from the cabin vents?","expected_docs":["03_cabin_filter"]}
+]

@@ -1,0 +1,46 @@
+{
+  "checked": 20,
+  "correct": 8,
+  "incorrect": 12,
+  "accuracy": 0.4,
+  "reviewer": "assistant at user request",
+  "review_date": "2026-10-21",
+  "criterion": "Full typed-fact correctness: source support, entities, entity types, relation, direction and scope; semantic aliases allowed.",
+  "sample_seed": 42,
+  "correct_ids": [
+    "f041",
+    "f008",
+    "f002",
+    "f018",
+    "f016",
+    "f009",
+    "f052",
+    "f014"
+  ],
+  "incorrect_ids": [
+    "f048",
+    "f015",
+    "f007",
+    "f044",
+    "f035",
+    "f006",
+    "f038",
+    "f028",
+    "f003",
+    "f043",
+    "f051",
+    "f033"
+  ],
+  "error_counts": {
+    "lost_condition": 1,
+    "wrong_direction": 3,
+    "wrong_relation": 2,
+    "unresolved_entity": 1,
+    "unsupported_evidence": 1,
+    "wrong_linking": 2,
+    "type_mismatch": 1,
+    "negation_scope": 1
+  },
+  "facts_sha256": "f9997767066852f04650a4a33679eab260981d90152f79550611b56cf7b8408b",
+  "review_csv_sha256": "597087e908ec54f38d473b7272e11f65599ccdc45d011af5a5a2a9c3be9d5767"
+}

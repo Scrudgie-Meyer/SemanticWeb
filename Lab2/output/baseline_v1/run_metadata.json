@@ -1,0 +1,13 @@
+{
+  "mode": "live",
+  "llm_executed": true,
+  "provider": "ollama",
+  "model": "qwen3:4b-instruct",
+  "fact_origin": "llm_structured_output",
+  "documents": 10,
+  "facts": 54,
+  "nodes": 68,
+  "edges": 54,
+  "communities": 16,
+  "corpus_sha256": "8cefea4ad965c0d572f791be5ca3b706a2e6450c023881e2b0f3da65b9f7b546"
+}

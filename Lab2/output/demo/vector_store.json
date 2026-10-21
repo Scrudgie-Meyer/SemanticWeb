@@ -1,0 +1,9 @@
+{
+  "backend": "demo",
+  "shape": [
+    12,
+    613
+  ],
+  "semantic": false,
+  "model": "TF-IDF demonstration baseline"
+}

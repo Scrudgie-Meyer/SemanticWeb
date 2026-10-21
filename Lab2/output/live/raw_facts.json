@@ -1,0 +1,1157 @@
+[
+  {
+    "evidence": "Nissan Qashqai 2011 має масляний фільтр.",
+    "object": {
+      "id": "oil_filter",
+      "name": "Масляний фільтр",
+      "type": "part"
+    },
+    "relation": "HAS_PART",
+    "subject": {
+      "id": "nissan_qashqai_2011",
+      "name": "Nissan Qashqai 2011",
+      "type": "vehicle"
+    },
+    "doc_id": "01_selection"
+  },
+  {
+    "evidence": "Nissan Qashqai 2011 має салонний фільтр.",
+    "object": {
+      "id": "cabin_filter",
+      "name": "Салонний фільтр",
+      "type": "part"
+    },
+    "relation": "HAS_PART",
+    "subject": {
+      "id": "nissan_qashqai_2011",
+      "name": "Nissan Qashqai 2011",
+      "type": "vehicle"
+    },
+    "doc_id": "01_selection"
+  },
+  {
+    "evidence": "Nissan Qashqai 2011 має гальмівний диск.",
+    "object": {
+      "id": "brake_disk",
+      "name": "Гальмівний диск",
+      "type": "part"
+    },
+    "relation": "HAS_PART",
+    "subject": {
+      "id": "nissan_qashqai_2011",
+      "name": "Nissan Qashqai 2011",
+      "type": "vehicle"
+    },
+    "doc_id": "01_selection"
+  },
+  {
+    "evidence": "Підбір запчастини вимагає перевірки VIN.",
+    "object": {
+      "id": "vin_check",
+      "name": "Перевірка VIN",
+      "type": "procedure"
+    },
+    "relation": "REQUIRES",
+    "subject": {
+      "id": "part_selection",
+      "name": "Підбір запчастини",
+      "type": "procedure"
+    },
+    "doc_id": "01_selection"
+  },
+  {
+    "evidence": "Підбір запчастини вимагає перевірки модифікації двигуна.",
+    "object": {
+      "id": "engine_mod_check",
+      "name": "Перевірка модифікації двигуна",
+      "type": "procedure"
+    },
+    "relation": "REQUIRES",
+    "subject": {
+      "id": "part_selection",
+      "name": "Підбір запчастини",
+      "type": "procedure"
+    },
+    "doc_id": "01_selection"
+  },
+  {
+    "evidence": "Підбір запчастини вимагає перевірки розмірів деталі.",
+    "object": {
+      "id": "dimension_check",
+      "name": "Перевірка розмірів деталі",
+      "type": "procedure"
+    },
+    "relation": "REQUIRES",
+    "subject": {
+      "id": "part_selection",
+      "name": "Підбір запчастини",
+      "type": "procedure"
+    },
+    "doc_id": "01_selection"
+  },
+  {
+    "evidence": "Перевірка VIN передує замовленню запчастини.",
+    "object": {
+      "id": "part_order",
+      "name": "Замовлення запчастини",
+      "type": "procedure"
+    },
+    "relation": "PRECEDES",
+    "subject": {
+      "id": "vin_check",
+      "name": "Перевірка VIN",
+      "type": "procedure"
+    },
+    "doc_id": "01_selection"
+  },
+  {
+    "evidence": "Майстер спочатку записує дані автомобіля, потім звіряє каталог і лише після цього формує перелік позицій.",
+    "object": {
+      "id": "catalog_verification",
+      "name": "Звірка каталогу",
+      "type": "procedure"
+    },
+    "relation": "SELECTED_BY",
+    "subject": {
+      "id": "part_selection",
+      "name": "Підбір запчастини",
+      "type": "procedure"
+    },
+    "doc_id": "01_selection"
+  },
+  {
+    "evidence": "Масляний фільтр підбирають за модифікацією двигуна.",
+    "object": {
+      "id": "filter",
+      "name": "Масляний фільтр",
+      "type": "part"
+    },
+    "relation": "SELECTED_BY",
+    "subject": {
+      "id": "engine_modification",
+      "name": "Модифікація двигуна",
+      "type": "criterion"
+    },
+    "doc_id": "02_oil_filter"
+  },
+  {
+    "evidence": "Масляний фільтр підбирають за розмірами деталі.",
+    "object": {
+      "id": "dimensions",
+      "name": "Розміри деталі",
+      "type": "criterion"
+    },
+    "relation": "SELECTED_BY",
+    "subject": {
+      "id": "filter",
+      "name": "Масляний фільтр",
+      "type": "part"
+    },
+    "doc_id": "02_oil_filter"
+  },
+  {
+    "evidence": "Масляний фільтр підбирають за перевіркою VIN.",
+    "object": {
+      "id": "vin_check",
+      "name": "Перевірка VIN",
+      "type": "criterion"
+    },
+    "relation": "SELECTED_BY",
+    "subject": {
+      "id": "filter",
+      "name": "Масляний фільтр",
+      "type": "part"
+    },
+    "doc_id": "02_oil_filter"
+  },
+  {
+    "evidence": "Підтікання біля фільтра перевіряють оглядом ущільнення.",
+    "object": {
+      "id": "inspection_of_seal",
+      "name": "Огляд ущільнення",
+      "type": "procedure"
+    },
+    "relation": "CHECKED_BY",
+    "subject": {
+      "id": "leakage",
+      "name": "Підтікання біля фільтра",
+      "type": "symptom"
+    },
+    "doc_id": "02_oil_filter"
+  },
+  {
+    "evidence": "Огляд ущільнення передує заміні масляного фільтра.",
+    "object": {
+      "id": "replacement_of_filter",
+      "name": "Заміна масляного фільтра",
+      "type": "procedure"
+    },
+    "relation": "PRECEDES",
+    "subject": {
+      "id": "inspection_of_seal",
+      "name": "Огляд ущільнення",
+      "type": "procedure"
+    },
+    "doc_id": "02_oil_filter"
+  },
+  {
+    "evidence": "Планове обслуговування вимагає перевірки масляного фільтра.",
+    "object": {
+      "id": "planned_service",
+      "name": "Планове обслуговування",
+      "type": "procedure"
+    },
+    "relation": "REQUIRES",
+    "subject": {
+      "id": "filter",
+      "name": "Масляний фільтр",
+      "type": "part"
+    },
+    "doc_id": "02_oil_filter"
+  },
+  {
+    "evidence": "Працівник звіряє упаковку з підтвердженою позицією та перевіряє відповідність посадкових розмірів.",
+    "object": {
+      "id": "dimensional_fit",
+      "name": "Відповідність посадкових розмірів",
+      "type": "criterion"
+    },
+    "relation": "CHECKED_BY",
+    "subject": {
+      "id": "filter",
+      "name": "Масляний фільтр",
+      "type": "part"
+    },
+    "doc_id": "02_oil_filter"
+  },
+  {
+    "evidence": "Працівник не переносить назву фільтра з одного замовлення в інше без перевірки автомобіля.",
+    "object": {
+      "id": "vehicle_check",
+      "name": "Перевірка автомобіля",
+      "type": "procedure"
+    },
+    "relation": "REQUIRES",
+    "subject": {
+      "id": "filter",
+      "name": "Масляний фільтр",
+      "type": "part"
+    },
+    "doc_id": "02_oil_filter"
+  },
+  {
+    "evidence": "Салонний фільтр підбирають за перевіркою VIN.",
+    "object": {
+      "id": "criterion",
+      "name": "Перевірка VIN",
+      "type": "criterion"
+    },
+    "relation": "SELECTED_BY",
+    "subject": {
+      "id": "filter",
+      "name": "Салонний фільтр",
+      "type": "part"
+    },
+    "doc_id": "03_cabin_filter"
+  },
+  {
+    "evidence": "Салонний фільтр підбирають за розмірами деталі.",
+    "object": {
+      "id": "criterion",
+      "name": "Розміри деталі",
+      "type": "criterion"
+    },
+    "relation": "SELECTED_BY",
+    "subject": {
+      "id": "filter",
+      "name": "Салонний фільтр",
+      "type": "part"
+    },
+    "doc_id": "03_cabin_filter"
+  },
+  {
+    "evidence": "Салонний фільтр пов’язаний зі слабким потоком повітря.",
+    "object": {
+      "id": "symptom",
+      "name": "Слабкий потік повітря",
+      "type": "symptom"
+    },
+    "relation": "HAS_SYMPTOM",
+    "subject": {
+      "id": "filter",
+      "name": "Салонний фільтр",
+      "type": "part"
+    },
+    "doc_id": "03_cabin_filter"
+  },
+  {
+    "evidence": "Слабкий потік повітря перевіряють оглядом салонного фільтра.",
+    "object": {
+      "id": "inspection",
+      "name": "Огляд салонного фільтра",
+      "type": "procedure"
+    },
+    "relation": "CHECKED_BY",
+    "subject": {
+      "id": "weak_airflow",
+      "name": "Слабкий потік повітря",
+      "type": "symptom"
+    },
+    "doc_id": "03_cabin_filter"
+  },
+  {
+    "evidence": "Огляд салонного фільтра передує заміні салонного фільтра.",
+    "object": {
+      "id": "replacement",
+      "name": "Заміна салонного фільтра",
+      "type": "procedure"
+    },
+    "relation": "PRECEDES",
+    "subject": {
+      "id": "inspection",
+      "name": "Огляд салонного фільтра",
+      "type": "procedure"
+    },
+    "doc_id": "03_cabin_filter"
+  },
+  {
+    "evidence": "Забруднення фільтра є підставою перевірити деталь.",
+    "object": {
+      "id": "criterion",
+      "name": "Забруднення фільтра",
+      "type": "criterion"
+    },
+    "relation": "REQUIRES",
+    "subject": {
+      "id": "inspection",
+      "name": "Огляд салонного фільтра",
+      "type": "procedure"
+    },
+    "doc_id": "03_cabin_filter"
+  },
+  {
+    "evidence": "Слабкий потік повітря в салоні.",
+    "object": {
+      "id": "symptom",
+      "name": "Слабкий потік повітря",
+      "type": "symptom"
+    },
+    "relation": "HAS_SYMPTOM",
+    "subject": {
+      "id": "vehicle",
+      "name": "Автомобіль",
+      "type": "vehicle"
+    },
+    "doc_id": "03_cabin_filter"
+  },
+  {
+    "evidence": "Навчальний код салонного фільтра — EDU-QJ10-CAB-003.",
+    "object": {
+      "id": "code",
+      "name": "EDU-QJ10-CAB-003",
+      "type": "criterion"
+    },
+    "relation": "REQUIRES",
+    "subject": {
+      "id": "filter",
+      "name": "Салонний фільтр",
+      "type": "part"
+    },
+    "doc_id": "03_cabin_filter"
+  },
+  {
+    "evidence": "Гальмівний диск пов’язаний із вібрацією при гальмуванні.",
+    "object": {
+      "id": "vibration",
+      "name": "Вібрація при гальмуванні",
+      "type": "symptom"
+    },
+    "relation": "HAS_SYMPTOM",
+    "subject": {
+      "id": "brake_disk",
+      "name": "Гальмівний диск",
+      "type": "part"
+    },
+    "doc_id": "04_brakes"
+  },
+  {
+    "evidence": "Вібрацію при гальмуванні перевіряють вимірюванням биття диска.",
+    "object": {
+      "id": "measurement",
+      "name": "Вимірювання биття диска",
+      "type": "procedure"
+    },
+    "relation": "CHECKED_BY",
+    "subject": {
+      "id": "vibration",
+      "name": "Вібрація при гальмуванні",
+      "type": "symptom"
+    },
+    "doc_id": "04_brakes"
+  },
+  {
+    "evidence": "Биття гальмівного диска перевіряють індикатором годинникового типу.",
+    "object": {
+      "id": "indicator",
+      "name": "Індикатор годинникового типу",
+      "type": "procedure"
+    },
+    "relation": "CHECKED_BY",
+    "subject": {
+      "id": "disc_wobble",
+      "name": "Биття гальмівного диска",
+      "type": "symptom"
+    },
+    "doc_id": "04_brakes"
+  },
+  {
+    "evidence": "Вимірювання биття диска передує заміні гальмівного диска.",
+    "object": {
+      "id": "replacement",
+      "name": "Заміна гальмівного диска",
+      "type": "procedure"
+    },
+    "relation": "PRECEDES",
+    "subject": {
+      "id": "measurement",
+      "name": "Вимірювання биття диска",
+      "type": "procedure"
+    },
+    "doc_id": "04_brakes"
+  },
+  {
+    "evidence": "Гальмівний диск підбирають за перевіркою VIN.",
+    "object": {
+      "id": "vin_check",
+      "name": "Перевірка VIN",
+      "type": "criterion"
+    },
+    "relation": "SELECTED_BY",
+    "subject": {
+      "id": "brake_disk",
+      "name": "Гальмівний диск",
+      "type": "part"
+    },
+    "doc_id": "04_brakes"
+  },
+  {
+    "evidence": "Гальмівний диск підбирають за розмірами деталі.",
+    "object": {
+      "id": "size_criterion",
+      "name": "Розміри деталі",
+      "type": "criterion"
+    },
+    "relation": "SELECTED_BY",
+    "subject": {
+      "id": "brake_disk",
+      "name": "Гальмівний диск",
+      "type": "part"
+    },
+    "doc_id": "04_brakes"
+  },
+  {
+    "evidence": "Гальмівні колодки підбирають за типом супорта.",
+    "object": {
+      "id": "support_type_criterion",
+      "name": "Тип супорта",
+      "type": "criterion"
+    },
+    "relation": "SELECTED_BY",
+    "subject": {
+      "id": "brake_pads",
+      "name": "Гальмівні колодки",
+      "type": "part"
+    },
+    "doc_id": "04_brakes"
+  },
+  {
+    "evidence": "Працівник звіряє сумісність компонентів гальмівного вузла і не замовляє комплект лише за фотографією.",
+    "object": {
+      "id": "component_compatibility_check",
+      "name": "Звірка сумісності компонентів гальмівного вузла",
+      "type": "procedure"
+    },
+    "relation": "REQUIRES",
+    "subject": {
+      "id": "brake_assembly",
+      "name": "Гальмівний вузол",
+      "type": "part"
+    },
+    "doc_id": "04_brakes"
+  },
+  {
+    "evidence": "Стійка стабілізатора пов’язана зі стуком на нерівностях.",
+    "object": {
+      "id": "stability_link",
+      "name": "стійка стабілізатора",
+      "type": "part"
+    },
+    "relation": "HAS_SYMPTOM",
+    "subject": {
+      "id": "noise_on_uneven",
+      "name": "стук на нерівностях",
+      "type": "symptom"
+    },
+    "doc_id": "05_suspension"
+  },
+  {
+    "evidence": "Стук на нерівностях перевіряють оглядом шарнірів.",
+    "object": {
+      "id": "inspection",
+      "name": "огляд шарнірів",
+      "type": "procedure"
+    },
+    "relation": "CHECKED_BY",
+    "subject": {
+      "id": "noise_on_uneven",
+      "name": "стук на нерівностях",
+      "type": "symptom"
+    },
+    "doc_id": "05_suspension"
+  },
+  {
+    "evidence": "Огляд шарнірів передує заміні стійки стабілізатора.",
+    "object": {
+      "id": "replacement_stability",
+      "name": "заміна стійки стабілізатора",
+      "type": "procedure"
+    },
+    "relation": "PRECEDES",
+    "subject": {
+      "id": "inspection",
+      "name": "огляд шарнірів",
+      "type": "procedure"
+    },
+    "doc_id": "05_suspension"
+  },
+  {
+    "evidence": "Стійку стабілізатора підбирають за перевіркою VIN.",
+    "object": {
+      "id": "criterion_vin",
+      "name": "перевірка VIN",
+      "type": "criterion"
+    },
+    "relation": "SELECTED_BY",
+    "subject": {
+      "id": "stability_link",
+      "name": "стійка стабілізатора",
+      "type": "part"
+    },
+    "doc_id": "05_suspension"
+  },
+  {
+    "evidence": "Стійку стабілізатора підбирають за стороною встановлення.",
+    "object": {
+      "id": "criterion_side",
+      "name": "сторона встановлення",
+      "type": "criterion"
+    },
+    "relation": "SELECTED_BY",
+    "subject": {
+      "id": "stability_link",
+      "name": "стійка стабілізатора",
+      "type": "part"
+    },
+    "doc_id": "05_suspension"
+  },
+  {
+    "evidence": "Діагностика передує закупівлі.",
+    "object": {
+      "id": "purchase",
+      "name": "закупівля",
+      "type": "procedure"
+    },
+    "relation": "PRECEDES",
+    "subject": {
+      "id": "diagnosis",
+      "name": "діагностика",
+      "type": "procedure"
+    },
+    "doc_id": "05_suspension"
+  },
+  {
+    "evidence": "Перевірка сумісності залишається окремим етапом.",
+    "object": {
+      "id": "compatibility_check",
+      "name": "перевірка сумісності",
+      "type": "procedure"
+    },
+    "relation": "REQUIRES",
+    "subject": {
+      "id": "replacement_stability",
+      "name": "заміна стійки стабілізатора",
+      "type": "procedure"
+    },
+    "doc_id": "05_suspension"
+  },
+  {
+    "evidence": "Перед замовленням працівник записує сторону встановлення і каталожне підтвердження.",
+    "object": {
+      "id": "criterion_side",
+      "name": "сторона встановлення",
+      "type": "criterion"
+    },
+    "relation": "SELECTED_BY",
+    "subject": {
+      "id": "stability_link",
+      "name": "стійка стабілізатора",
+      "type": "part"
+    },
+    "doc_id": "05_suspension"
+  },
+  {
+    "evidence": "Ступичний підшипник пов’язаний із гулом колеса, що змінюється в повороті.",
+    "object": {
+      "id": "hub",
+      "name": "Ступичний підшипник",
+      "type": "part"
+    },
+    "relation": "HAS_SYMPTOM",
+    "subject": {
+      "id": "noise",
+      "name": "Гул колеса",
+      "type": "symptom"
+    },
+    "doc_id": "06_bearing"
+  },
+  {
+    "evidence": "Гул колеса перевіряють діагностикою ступичного підшипника.",
+    "object": {
+      "id": "diagnosis",
+      "name": "Діагностика ступичного підшипника",
+      "type": "procedure"
+    },
+    "relation": "CHECKED_BY",
+    "subject": {
+      "id": "noise",
+      "name": "Гул колеса",
+      "type": "symptom"
+    },
+    "doc_id": "06_bearing"
+  },
+  {
+    "evidence": "Діагностика ступичного підшипника передує заміні ступичного підшипника.",
+    "object": {
+      "id": "replacement",
+      "name": "Заміна ступичного підшипника",
+      "type": "procedure"
+    },
+    "relation": "PRECEDES",
+    "subject": {
+      "id": "diagnosis",
+      "name": "Діагностика ступичного підшипника",
+      "type": "procedure"
+    },
+    "doc_id": "06_bearing"
+  },
+  {
+    "evidence": "Ступичний підшипник підбирають за перевіркою VIN.",
+    "object": {
+      "id": "criterion_vin",
+      "name": "Перевірка VIN",
+      "type": "criterion"
+    },
+    "relation": "SELECTED_BY",
+    "subject": {
+      "id": "hub",
+      "name": "Ступичний підшипник",
+      "type": "part"
+    },
+    "doc_id": "06_bearing"
+  },
+  {
+    "evidence": "Ступичний підшипник підбирають за сумісністю з ABS.",
+    "object": {
+      "id": "criterion_abs",
+      "name": "Сумісність з ABS",
+      "type": "criterion"
+    },
+    "relation": "SELECTED_BY",
+    "subject": {
+      "id": "hub",
+      "name": "Ступичний підшипник",
+      "type": "part"
+    },
+    "doc_id": "06_bearing"
+  },
+  {
+    "evidence": "Працівник записує скаргу як спостереження і не оголошує її достатнім доказом несправності.",
+    "object": {
+      "id": "criterion",
+      "name": "Достатній доказ несправності",
+      "type": "criterion"
+    },
+    "relation": "REQUIRES",
+    "subject": {
+      "id": "noise",
+      "name": "Гул колеса",
+      "type": "symptom"
+    },
+    "doc_id": "06_bearing"
+  },
+  {
+    "evidence": "Побутовий опис шуму можна пов’язати з технічною назвою вузла.",
+    "object": {
+      "id": "criterion",
+      "name": "Побутовий опис шуму",
+      "type": "criterion"
+    },
+    "relation": "HAS_SYMPTOM",
+    "subject": {
+      "id": "hub",
+      "name": "Ступичний підшипник",
+      "type": "part"
+    },
+    "doc_id": "06_bearing"
+  },
+  {
+    "evidence": "Після перевірки майстер звіряє виконання вузла за каталогом.",
+    "object": {
+      "id": "procedure_check",
+      "name": "Звірка виконання вузла за каталогом",
+      "type": "procedure"
+    },
+    "relation": "REQUIRES",
+    "subject": {
+      "id": "hub",
+      "name": "Ступичний підшипник",
+      "type": "part"
+    },
+    "doc_id": "06_bearing"
+  },
+  {
+    "evidence": "Патрубок охолодження пов’язаний із підтіканням охолоджувальної рідини.",
+    "object": {
+      "id": "pipe",
+      "name": "патрубок охолодження",
+      "type": "part"
+    },
+    "relation": "HAS_SYMPTOM",
+    "subject": {
+      "id": "leakage",
+      "name": "підтікання охолоджувальної рідини",
+      "type": "symptom"
+    },
+    "doc_id": "07_cooling"
+  },
+  {
+    "evidence": "Підтікання охолоджувальної рідини перевіряють оглядом з’єднань.",
+    "object": {
+      "id": "inspection",
+      "name": "огляд з’єднань",
+      "type": "procedure"
+    },
+    "relation": "CHECKED_BY",
+    "subject": {
+      "id": "leakage",
+      "name": "підтікання охолоджувальної рідини",
+      "type": "symptom"
+    },
+    "doc_id": "07_cooling"
+  },
+  {
+    "evidence": "Огляд з’єднань передує заміні патрубка охолодження.",
+    "object": {
+      "id": "replacement",
+      "name": "заміна патрубка охолодження",
+      "type": "procedure"
+    },
+    "relation": "PRECEDES",
+    "subject": {
+      "id": "inspection",
+      "name": "огляд з’єднань",
+      "type": "procedure"
+    },
+    "doc_id": "07_cooling"
+  },
+  {
+    "evidence": "Патрубок охолодження підбирають за модифікацією двигуна.",
+    "object": {
+      "id": "criterion_engine_mod",
+      "name": "модифікація двигуна",
+      "type": "criterion"
+    },
+    "relation": "SELECTED_BY",
+    "subject": {
+      "id": "pipe",
+      "name": "патрубок охолодження",
+      "type": "part"
+    },
+    "doc_id": "07_cooling"
+  },
+  {
+    "evidence": "Патрубок охолодження підбирають за перевіркою VIN.",
+    "object": {
+      "id": "criterion_vin",
+      "name": "перевірка VIN",
+      "type": "criterion"
+    },
+    "relation": "SELECTED_BY",
+    "subject": {
+      "id": "pipe",
+      "name": "патрубок охолодження",
+      "type": "part"
+    },
+    "doc_id": "07_cooling"
+  },
+  {
+    "evidence": "Підтікання охолоджувальної рідини перевіряють оглядом з’єднань.",
+    "object": {
+      "id": "inspection",
+      "name": "огляд з’єднань",
+      "type": "procedure"
+    },
+    "relation": "CHECKED_BY",
+    "subject": {
+      "id": "leakage",
+      "name": "підтікання охолоджувальної рідини",
+      "type": "symptom"
+    },
+    "doc_id": "07_cooling"
+  },
+  {
+    "evidence": "Огляд з’єднань передує заміні патрубка охолодження.",
+    "object": {
+      "id": "replacement",
+      "name": "заміна патрубка охолодження",
+      "type": "procedure"
+    },
+    "relation": "PRECEDES",
+    "subject": {
+      "id": "inspection",
+      "name": "огляд з’єднань",
+      "type": "procedure"
+    },
+    "doc_id": "07_cooling"
+  },
+  {
+    "evidence": "Патрубок охолодження підбирають за модифікацією двигуна.",
+    "object": {
+      "id": "criterion_engine_mod",
+      "name": "модифікація двигуна",
+      "type": "criterion"
+    },
+    "relation": "SELECTED_BY",
+    "subject": {
+      "id": "pipe",
+      "name": "патрубок охолодження",
+      "type": "part"
+    },
+    "doc_id": "07_cooling"
+  },
+  {
+    "evidence": "Ремінь допоміжних агрегатів пов’язаний зі свистом приводу.",
+    "object": {
+      "id": "belt",
+      "name": "Ремінь допоміжних агрегатів",
+      "type": "part"
+    },
+    "relation": "HAS_SYMPTOM",
+    "subject": {
+      "id": "whistle",
+      "name": "Свист приводу",
+      "type": "symptom"
+    },
+    "doc_id": "08_belt"
+  },
+  {
+    "evidence": "Свист приводу перевіряють оглядом ременя та роликів.",
+    "object": {
+      "id": "inspection",
+      "name": "Огляд ременя та роликів",
+      "type": "procedure"
+    },
+    "relation": "CHECKED_BY",
+    "subject": {
+      "id": "whistle",
+      "name": "Свист приводу",
+      "type": "symptom"
+    },
+    "doc_id": "08_belt"
+  },
+  {
+    "evidence": "Огляд ременя та роликів передує заміні ременя допоміжних агрегатів.",
+    "object": {
+      "id": "replacement",
+      "name": "Заміна ременя допоміжних агрегатів",
+      "type": "procedure"
+    },
+    "relation": "PRECEDES",
+    "subject": {
+      "id": "inspection",
+      "name": "Огляд ременя та роликів",
+      "type": "procedure"
+    },
+    "doc_id": "08_belt"
+  },
+  {
+    "evidence": "Ремінь допоміжних агрегатів підбирають за модифікацією двигуна.",
+    "object": {
+      "id": "criterion_engine_mod",
+      "name": "Модифікація двигуна",
+      "type": "criterion"
+    },
+    "relation": "SELECTED_BY",
+    "subject": {
+      "id": "belt",
+      "name": "Ремінь допоміжних агрегатів",
+      "type": "part"
+    },
+    "doc_id": "08_belt"
+  },
+  {
+    "evidence": "Ремінь допоміжних агрегатів підбирають за розмірами деталі.",
+    "object": {
+      "id": "criterion_size",
+      "name": "Розміри деталі",
+      "type": "criterion"
+    },
+    "relation": "SELECTED_BY",
+    "subject": {
+      "id": "belt",
+      "name": "Ремінь допоміжних агрегатів",
+      "type": "part"
+    },
+    "doc_id": "08_belt"
+  },
+  {
+    "evidence": "Майстер оглядає не лише ремінь, але й суміжні елементи приводу.",
+    "object": {
+      "id": "elements",
+      "name": "Суміжні елементи приводу",
+      "type": "part"
+    },
+    "relation": "HAS_PART",
+    "subject": {
+      "id": "whistle",
+      "name": "Свист приводу",
+      "type": "symptom"
+    },
+    "doc_id": "08_belt"
+  },
+  {
+    "evidence": "Результат підбору фіксують після перевірки конкретної комплектації.",
+    "object": {
+      "id": "criterion_specific_setup",
+      "name": "Конкретна комплектація",
+      "type": "criterion"
+    },
+    "relation": "REQUIRES",
+    "subject": {
+      "id": "selection",
+      "name": "Підбір ременя",
+      "type": "procedure"
+    },
+    "doc_id": "08_belt"
+  },
+  {
+    "evidence": "Акумулятор пов’язаний із повільним обертанням стартера.",
+    "object": {
+      "id": "battery",
+      "name": "Акумулятор",
+      "type": "part"
+    },
+    "relation": "HAS_SYMPTOM",
+    "subject": {
+      "id": "slow_starter_rotation",
+      "name": "Повільне обертання стартера",
+      "type": "symptom"
+    },
+    "doc_id": "09_battery"
+  },
+  {
+    "evidence": "Повільне обертання стартера перевіряють тестом акумулятора.",
+    "object": {
+      "id": "battery_test",
+      "name": "Тест акумулятора",
+      "type": "procedure"
+    },
+    "relation": "CHECKED_BY",
+    "subject": {
+      "id": "slow_starter_rotation",
+      "name": "Повільне обертання стартера",
+      "type": "symptom"
+    },
+    "doc_id": "09_battery"
+  },
+  {
+    "evidence": "Тест акумулятора передує заміні акумулятора.",
+    "object": {
+      "id": "battery_replacement",
+      "name": "Заміна акумулятора",
+      "type": "procedure"
+    },
+    "relation": "PRECEDES",
+    "subject": {
+      "id": "battery_test",
+      "name": "Тест акумулятора",
+      "type": "procedure"
+    },
+    "doc_id": "09_battery"
+  },
+  {
+    "evidence": "Акумулятор підбирають за полярністю.",
+    "object": {
+      "id": "polarity",
+      "name": "Полярність",
+      "type": "criterion"
+    },
+    "relation": "SELECTED_BY",
+    "subject": {
+      "id": "battery",
+      "name": "Акумулятор",
+      "type": "part"
+    },
+    "doc_id": "09_battery"
+  },
+  {
+    "evidence": "Акумулятор підбирають за розмірами деталі.",
+    "object": {
+      "id": "dimensions",
+      "name": "Розміри деталі",
+      "type": "criterion"
+    },
+    "relation": "SELECTED_BY",
+    "subject": {
+      "id": "battery",
+      "name": "Акумулятор",
+      "type": "part"
+    },
+    "doc_id": "09_battery"
+  },
+  {
+    "evidence": "Акумулятор підбирають за перевіркою VIN.",
+    "object": {
+      "id": "vin_check",
+      "name": "Перевірка VIN",
+      "type": "criterion"
+    },
+    "relation": "SELECTED_BY",
+    "subject": {
+      "id": "battery",
+      "name": "Акумулятор",
+      "type": "part"
+    },
+    "doc_id": "09_battery"
+  },
+  {
+    "evidence": "Замовлення запчастини вимагає перевірки VIN.",
+    "object": {
+      "id": "vin_check",
+      "name": "Перевірка VIN",
+      "type": "procedure"
+    },
+    "relation": "REQUIRES",
+    "subject": {
+      "id": "order",
+      "name": "Замовлення запчастини",
+      "type": "procedure"
+    },
+    "doc_id": "10_order"
+  },
+  {
+    "evidence": "Замовлення запчастини вимагає підтвердження діагностики.",
+    "object": {
+      "id": "diagnostics_confirmation",
+      "name": "Підтвердження діагностики",
+      "type": "criterion"
+    },
+    "relation": "REQUIRES",
+    "subject": {
+      "id": "order",
+      "name": "Замовлення запчастини",
+      "type": "procedure"
+    },
+    "doc_id": "10_order"
+  },
+  {
+    "evidence": "Підтвердження діагностики передує замовленню запчастини.",
+    "object": {
+      "id": "order",
+      "name": "Замовлення запчастини",
+      "type": "procedure"
+    },
+    "relation": "PRECEDES",
+    "subject": {
+      "id": "diagnostics_confirmation",
+      "name": "Підтвердження діагностики",
+      "type": "criterion"
+    },
+    "doc_id": "10_order"
+  },
+  {
+    "evidence": "Підтвердження каталогу передує замовленню запчастини.",
+    "object": {
+      "id": "order",
+      "name": "Замовлення запчастини",
+      "type": "procedure"
+    },
+    "relation": "PRECEDES",
+    "subject": {
+      "id": "catalog_confirmation",
+      "name": "Підтвердження каталогу",
+      "type": "criterion"
+    },
+    "doc_id": "10_order"
+  },
+  {
+    "evidence": "Працівник відкриває відповідні документи корпусу і формує три напрямки перевірки: вентиляція салону, гальмівний вузол і ступичний вузол.",
+    "object": {
+      "id": "ventilation_check",
+      "name": "Перевірка вентиляції салону",
+      "type": "procedure"
+    },
+    "relation": "HAS_PART",
+    "subject": {
+      "id": "chassis_documents",
+      "name": "Документи корпусу",
+      "type": "vehicle"
+    },
+    "doc_id": "10_order"
+  },
+  {
+    "evidence": "Працівник відкриває відповідні документи корпусу і формує три напрямки перевірки: вентиляція салону, гальмівний вузол і ступичний вузол.",
+    "object": {
+      "id": "brake_node_check",
+      "name": "Перевірка гальмівного вузла",
+      "type": "procedure"
+    },
+    "relation": "HAS_PART",
+    "subject": {
+      "id": "chassis_documents",
+      "name": "Документи корпусу",
+      "type": "vehicle"
+    },
+    "doc_id": "10_order"
+  },
+  {
+    "evidence": "Працівник відкриває відповідні документи корпусу і формує три напрямки перевірки: вентиляція салону, гальмівний вузол і ступичний вузол.",
+    "object": {
+      "id": "wheel_node_check",
+      "name": "Перевірка ступичного вузла",
+      "type": "procedure"
+    },
+    "relation": "HAS_PART",
+    "subject": {
+      "id": "chassis_documents",
+      "name": "Документи корпусу",
+      "type": "vehicle"
+    },
+    "doc_id": "10_order"
+  },
+  {
+    "evidence": "В одному зверненні власник називає слабкий потік повітря, вібрацію при гальмуванні та гул колеса.",
+    "object": {
+      "id": "weak_air_flow",
+      "name": "Слабкий потік повітря",
+      "type": "symptom"
+    },
+    "relation": "HAS_SYMPTOM",
+    "subject": {
+      "id": "customer_complaint",
+      "name": "Звернення власника",
+      "type": "part"
+    },
+    "doc_id": "10_order"
+  }
+]
